@@ -220,12 +220,12 @@
     }
     
     .workflow-widget:nth-child(1) { top: 0 !important; }
-    .workflow-widget:nth-child(2) { top: 200px !important; }
-    .workflow-widget:nth-child(3) { top: 400px !important; }
-    .workflow-widget:nth-child(4) { top: 600px !important; }
-    .workflow-widget:nth-child(5) { top: 800px !important; }
-    .workflow-widget:nth-child(6) { top: 1000px !important; }
-    .workflow-widget:nth-child(7) { top: 1200px !important; }
+    .workflow-widget:nth-child(2) { top: 300px !important; }
+    .workflow-widget:nth-child(3) { top: 600px !important; }
+    .workflow-widget:nth-child(4) { top: 900px !important; }
+    .workflow-widget:nth-child(5) { top: 1200px !important; }
+    .workflow-widget:nth-child(6) { top: 1500px !important; }
+    .workflow-widget:nth-child(7) { top: 1800px !important; }
   }
 
   /* Inspirational Quote Boxes */
