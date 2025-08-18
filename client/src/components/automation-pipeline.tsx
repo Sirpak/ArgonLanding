@@ -7,6 +7,39 @@ export default function AutomationPipeline() {
   const logosWrap1Ref = useRef<HTMLDivElement>(null);
   const logosWrap2Ref = useRef<HTMLDivElement>(null);
 
+  // Array of icon paths from assets/icons folder
+  const iconPaths = [
+    "/attached_assets/icons/docker.png",
+    "/attached_assets/icons/aws.png",
+    "/attached_assets/icons/stripe.jpeg",
+    "/attached_assets/icons/openai.jpg",
+    "/attached_assets/icons/Mailchimp-logo.png",
+    "/attached_assets/icons/teams.jpeg",
+    "/attached_assets/icons/asana.jpeg",
+    "/attached_assets/icons/confluence.png",
+    "/attached_assets/icons/code.jpeg",
+    "/attached_assets/icons/Invoice-Ninja-v5.png",
+    "/attached_assets/icons/qbintuit.png",
+    "/attached_assets/icons/mso.jpeg",
+    "/attached_assets/icons/bamboo.jpeg",
+    "/attached_assets/icons/notion.png",
+    "/attached_assets/icons/airtable.png",
+    "/attached_assets/icons/mysql.png",
+    "/attached_assets/icons/gdrive.png",
+    "/attached_assets/icons/hubspot.jpg",
+    "/attached_assets/icons/trello.png",
+    "/attached_assets/icons/slack.png",
+    "/attached_assets/icons/vero.jpg",
+    "/attached_assets/icons/lemlist.png",
+    "/attached_assets/icons/gmail.png",
+    "/attached_assets/icons/pagerduty.png"
+  ];
+
+  // Function to get random icon
+  const getRandomIcon = () => {
+    return iconPaths[Math.floor(Math.random() * iconPaths.length)];
+  };
+
   const pipelineQuotes = [
     "We help small businesses do more with less by automating the repetitive tasks that slow them down.",
     "Your team should focus on growth, not manual busywork.",
@@ -247,36 +280,36 @@ export default function AutomationPipeline() {
                 }}
               >
                 <div className="box-1 box flex w-full justify-around mb-8">
-                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <Database className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
-                    <Cloud className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
                 </div>
                 <div className="box-2 box flex w-full justify-around mb-8">
-                  <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center">
-                    <Zap className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
-                    <Database className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
                 </div>
                 <div className="box-3 box flex w-full justify-around">
-                  <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center">
-                    <Cloud className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
                 </div>
               </div>
@@ -289,36 +322,36 @@ export default function AutomationPipeline() {
                 }}
               >
                 <div className="box-1 box flex w-full justify-around mb-8">
-                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <Database className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
-                    <Cloud className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
                 </div>
                 <div className="box-2 box flex w-full justify-around mb-8">
-                  <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center">
-                    <Zap className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
-                    <Database className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
                 </div>
                 <div className="box-3 box flex w-full justify-around">
-                  <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center">
-                    <Cloud className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-                    <Shield className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
-                  <div className="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center overflow-hidden">
+                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
                   </div>
                 </div>
               </div>
@@ -372,17 +405,17 @@ export default function AutomationPipeline() {
 
             {/* Results Section */}
             <div className="absolute right-20 top-1/2 transform -translate-y-1/2 space-y-8">
-              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40">
-                <Database className="w-6 h-6 text-blue-600" />
+              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40 overflow-hidden">
+                <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
               </div>
-              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40">
-                <Cloud className="w-6 h-6 text-emerald-600" />
+              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40 overflow-hidden">
+                <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
               </div>
-              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40">
-                <Shield className="w-6 h-6 text-purple-600" />
+              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40 overflow-hidden">
+                <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
               </div>
-              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40">
-                <BarChart3 className="w-6 h-6 text-orange-600" />
+              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40 overflow-hidden">
+                <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
               </div>
             </div>
 
