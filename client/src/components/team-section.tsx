@@ -169,12 +169,13 @@ export default function TeamSection() {
             title="CEO & Software Engineer"
             handle="davidczerepak"
             status="Online"
-            contactText="Contact David"
+            contactText=""
             avatarUrl="https://picsum.photos/id/1005/300/300"
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}
-            onContactClick={() => handleContactClick("David Czerepak")}
+            onContactClick={() => {}}
+            description="Information Science and Computer Science - New Jersey Institute of Technology. PMI - PMP, AWS DevOps."
           />
           
           <ProfileCard
@@ -182,12 +183,13 @@ export default function TeamSection() {
             title="President & Lead Software Engineer"
             handle="swapnild"
             status="Online"
-            contactText="Contact Swapnil"
+            contactText=""
             avatarUrl="https://picsum.photos/id/1006/300/300"
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}
-            onContactClick={() => handleContactClick("Swapnil Deb")}
+            onContactClick={() => {}}
+            description="Experienced software engineer with expertise in full-stack development and team leadership."
           />
           
           <ProfileCard
@@ -195,12 +197,13 @@ export default function TeamSection() {
             title="AI Integration Expert & Solutions Engineer"
             handle="dathabindumalam"
             status="Online"
-            contactText="Contact Datha"
+            contactText=""
             avatarUrl="https://picsum.photos/id/1007/300/300"
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}
-            onContactClick={() => handleContactClick("Datha Bindumalam")}
+            onContactClick={() => {}}
+            description="Specialist in AI integration and custom automation solutions for business processes."
           />
         </div>
 

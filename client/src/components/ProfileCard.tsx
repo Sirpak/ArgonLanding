@@ -11,6 +11,7 @@ interface ProfileCardProps {
   enableTilt: boolean;
   enableMobileTilt: boolean;
   onContactClick: () => void;
+  description: string;
 }
 
 export default function ProfileCard({
@@ -23,7 +24,8 @@ export default function ProfileCard({
   showUserInfo,
   enableTilt,
   enableMobileTilt,
-  onContactClick
+  onContactClick,
+  description
 }: ProfileCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -105,13 +107,10 @@ export default function ProfileCard({
         </>
       )}
 
-      {/* Contact Button */}
-      <button
-        onClick={onContactClick}
-        className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
-      >
-        {contactText}
-      </button>
+      {/* Description */}
+      <p className="text-slate-300 leading-relaxed text-sm mb-4 px-2">
+        {description}
+      </p>
 
       {/* Hover effect line */}
       <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-blue-500 to-emerald-500 transition-all duration-500 mt-6 mx-auto"></div>
