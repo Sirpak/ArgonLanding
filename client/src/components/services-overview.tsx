@@ -77,6 +77,39 @@ export default function ServicesOverview() {
           })}
         </div>
 
+        {/* Inspirational Quotes in Beyond Automation Section */}
+        <div className="mt-20 grid md:grid-cols-2 gap-8">
+          {/* Quote 1 */}
+          <div className="glass-card p-6 rounded-2xl border-2 border-blue-500/30 bg-blue-600/10 hover:bg-blue-600/20 transition-all duration-300 group">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-blue-600/20 rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-blue-400">Our Promise</h4>
+            </div>
+            <blockquote className="text-slate-200 leading-relaxed font-medium italic text-lg">
+              "We make automation simple — no jargon, just results."
+            </blockquote>
+          </div>
+
+          {/* Quote 2 */}
+          <div className="glass-card p-6 rounded-2xl border-2 border-emerald-500/30 bg-emerald-600/10 hover:bg-emerald-600/20 transition-all duration-300 group">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-emerald-600/20 rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-emerald-400">Our Approach</h4>
+            </div>
+            <blockquote className="text-slate-200 leading-relaxed font-medium italic text-lg">
+              "Tell us your problem, we'll design the solution."
+            </blockquote>
+          </div>
+        </div>
+
         {/* Stacked Process Cards */}
         <StackedList />
       </div>

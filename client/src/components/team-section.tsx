@@ -176,6 +176,24 @@ export default function TeamSection() {
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Ready to work with our team? Let's discuss how we can automate your business processes and drive real results.
           </p>
+
+          {/* Inspirational Quote in Team Section */}
+          <div className="mb-8 max-w-2xl mx-auto">
+            <div className="glass-card p-6 rounded-2xl border-2 border-purple-500/30 bg-purple-600/10 hover:bg-purple-600/20 transition-all duration-300 group text-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-purple-600/20 rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-purple-400">Continuous Support</h4>
+              </div>
+              <blockquote className="text-slate-200 leading-relaxed font-medium italic text-lg">
+                "Ongoing support, so your business never misses a beat."
+              </blockquote>
+            </div>
+          </div>
+
           <button
             onClick={() => {
               const contactSection = document.getElementById('contact');
