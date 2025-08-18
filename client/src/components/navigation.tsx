@@ -22,7 +22,7 @@ export default function Navigation() {
               <img 
                 src="/covemind2.png" 
                 alt="Covemind" 
-                className="h-8 w-32 object-contain"
+                className="h-8 w-48 object-cover"
               />
             </div>
           </div>
