@@ -22,7 +22,7 @@ export default function HeroSection() {
             <img 
               src="/covemind.jpg" 
               alt="Covemind" 
-              className="w-32 h-32 md:w-40 md:h-40 rounded-2xl"
+              className="w-37 h-37 md:w-45 md:h-45 rounded-2xl"
             />
             <h1 className="text-6xl md:text-8xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Your Business,</span><br />
