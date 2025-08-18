@@ -46,14 +46,14 @@ export default function ServicesOverview() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20 animate-slide-up">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-emerald-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Layers className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-emerald-600/20 text-blue-400 px-4 py-2 rounded-full text-base font-medium mb-6">
+            <Layers className="w-5 h-5" />
             What We Do
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
             Beyond Automation
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+          <p className="text-2xl text-slate-300 max-w-3xl mx-auto">
             We understand the big picture of your business, strategize the best solutions, 
             and implement them seamlessly for unprecedented productivity.
           </p>
@@ -65,11 +65,11 @@ export default function ServicesOverview() {
             const IconComponent = service.icon;
             return (
               <div key={index} className="glass-card p-8 rounded-2xl hover:bg-slate-700/40 transition-all duration-300 group">
-                <div className={`w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className="w-7 h-7 text-white" />
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <IconComponent className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">{service.title}</h3>
-                <p className="text-slate-300 leading-relaxed">
+                <h3 className="text-2xl font-semibold mb-4 text-white">{service.title}</h3>
+                <p className="text-slate-300 leading-relaxed text-lg">
                   {service.description}
                 </p>
               </div>

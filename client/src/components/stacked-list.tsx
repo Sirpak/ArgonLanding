@@ -55,10 +55,10 @@ export default function StackedList() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-slide-up">
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+          <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
             Our Process
           </h3>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
             A systematic approach to transforming your business through intelligent automation
           </p>
         </div>
@@ -123,12 +123,12 @@ export default function StackedList() {
                 >
                   {/* Card Header */}
                   <header className="bg-gradient-to-r from-blue-600/80 to-emerald-600/80 p-4 md:p-6 flex items-center justify-between">
-                    <h4 className="text-lg md:text-xl font-semibold text-white m-0">
+                    <h4 className="text-xl md:text-2xl font-semibold text-white m-0">
                       {card.title}
                     </h4>
                     <label 
                       htmlFor={cards[(cardIndex + 1) % cards.length].id}
-                      className="text-white text-xl md:text-2xl cursor-pointer hover:rotate-90 transition-transform duration-300"
+                      className="text-white text-2xl md:text-3xl cursor-pointer hover:rotate-90 transition-transform duration-300"
                     >
                       &#10539;
                     </label>
@@ -151,7 +151,7 @@ export default function StackedList() {
                         {card.content.map((paragraph, pIndex) => (
                           <p
                             key={pIndex}
-                            className="text-slate-300 leading-relaxed text-xs md:text-sm"
+                            className="text-slate-300 leading-relaxed text-sm md:text-base"
                           >
                             {paragraph}
                           </p>
