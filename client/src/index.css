@@ -294,15 +294,15 @@
     }
     
     .quote-box:nth-child(1) { top: 0 !important; }
-    .quote-box:nth-child(2) { top: 120px !important; }
-    .quote-box:nth-child(3) { top: 240px !important; }
-    .quote-box:nth-child(4) { top: 360px !important; }
-    .quote-box:nth-child(5) { top: 480px !important; }
-    .quote-box:nth-child(6) { top: 600px !important; }
-    .quote-box:nth-child(7) { top: 720px !important; }
-    .quote-box:nth-child(8) { top: 840px !important; }
-    .quote-box:nth-child(9) { top: 960px !important; }
-    .quote-box:nth-child(10) { top: 1080px !important; }
+    .quote-box:nth-child(2) { top: 150px !important; }
+    .quote-box:nth-child(3) { top: 300px !important; }
+    .quote-box:nth-child(4) { top: 450px !important; }
+    .quote-box:nth-child(5) { top: 600px !important; }
+    .quote-box:nth-child(6) { top: 750px !important; }
+    .quote-box:nth-child(7) { top: 900px !important; }
+    .quote-box:nth-child(8) { top: 1050px !important; }
+    .quote-box:nth-child(9) { top: 1200px !important; }
+    .quote-box:nth-child(10) { top: 1350px !important; }
   }
 }
 

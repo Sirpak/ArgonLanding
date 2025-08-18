@@ -14,7 +14,7 @@ const quotes: QuoteBox[] = [
     id: "simple",
     quote: "We make automation simple — no jargon, just results.",
     icon: <Zap className="w-5 h-5" />,
-    position: { x: -500, y: 100 },
+    position: { x: -600, y: -200 },
     size: "medium",
     color: "blue"
   },
@@ -22,7 +22,7 @@ const quotes: QuoteBox[] = [
     id: "problem",
     quote: "Tell us your problem, we'll design the solution.",
     icon: <Target className="w-5 h-5" />,
-    position: { x: 500, y: 150 },
+    position: { x: 600, y: -150 },
     size: "medium",
     color: "emerald"
   },
@@ -30,7 +30,7 @@ const quotes: QuoteBox[] = [
     id: "partner",
     quote: "Think of us as your automation partner, not just a service.",
     icon: <Users className="w-5 h-5" />,
-    position: { x: -600, y: 300 },
+    position: { x: -500, y: 100 },
     size: "large",
     color: "purple"
   },
@@ -38,7 +38,7 @@ const quotes: QuoteBox[] = [
     id: "experts",
     quote: "Automation is difficult, so rely on experts to help you get it right from the start.",
     icon: <Star className="w-5 h-5" />,
-    position: { x: 600, y: 350 },
+    position: { x: 500, y: 150 },
     size: "large",
     color: "orange"
   },
@@ -46,7 +46,7 @@ const quotes: QuoteBox[] = [
     id: "support",
     quote: "We don't just build workflows, we support them.",
     icon: <Shield className="w-5 h-5" />,
-    position: { x: -400, y: 500 },
+    position: { x: -400, y: 400 },
     size: "small",
     color: "blue"
   },
@@ -54,7 +54,7 @@ const quotes: QuoteBox[] = [
     id: "reliable",
     quote: "Reliable automations, built for real-world businesses.",
     icon: <Shield className="w-5 h-5" />,
-    position: { x: 400, y: 550 },
+    position: { x: 400, y: 450 },
     size: "medium",
     color: "emerald"
   },
@@ -78,7 +78,7 @@ const quotes: QuoteBox[] = [
     id: "payback",
     quote: "Automations pay for themselves by giving your team hours back every week.",
     icon: <TrendingUp className="w-5 h-5" />,
-    position: { x: 0, y: 900 },
+    position: { x: 0, y: 1000 },
     size: "large",
     color: "blue"
   },
@@ -86,7 +86,7 @@ const quotes: QuoteBox[] = [
     id: "results",
     quote: "Save time, reduce errors, and scale faster.",
     icon: <Zap className="w-5 h-5" />,
-    position: { x: -200, y: 1000 },
+    position: { x: -200, y: 1200 },
     size: "small",
     color: "emerald"
   }
@@ -154,7 +154,7 @@ export default function InspirationalQuotes() {
         </div>
 
         {/* Scattered Quote Boxes */}
-        <div className="relative min-h-[1200px]">
+        <div className="relative min-h-[1400px]">
           {quotes.map((quoteBox) => (
             <div
               key={quoteBox.id}
