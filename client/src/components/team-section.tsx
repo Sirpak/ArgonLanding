@@ -1,5 +1,6 @@
 import { Linkedin, Twitter, Facebook } from "lucide-react";
 import ProfileCard from './ProfileCard';
+import TextType from './TextType';
 
 interface TeamMember {
   id: string;
@@ -53,6 +54,18 @@ export default function TeamSection() {
     console.log(`Contact clicked for ${memberName}`);
   };
 
+  const ceoQuotes = [
+    "We don't overpromise and we don't underdeliver. I believe in honesty, transparency, and being direct—in business and in life.",
+    "Success in automation comes from understanding the problem, not just the solution.",
+    "Every business process can be improved. We just need to find the right approach."
+  ];
+
+  const supportQuotes = [
+    "Ongoing support, so your business never misses a beat.",
+    "We're here for the long haul, not just the initial setup.",
+    "Your success is our success. That's why we never stop supporting you."
+  ];
+
   return (
     <section id="team" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,7 +97,16 @@ export default function TeamSection() {
               {/* Quote Box */}
               <blockquote className="glass-card p-8 md:p-12 rounded-2xl border-l-4 border-gradient-to-b from-blue-500 to-emerald-500 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm">
                 <p className="text-xl md:text-2xl text-slate-200 leading-relaxed italic font-light">
-                  "We don't overpromise and we don't underdeliver. I believe in honesty, transparency, and being direct—in business and in life."
+                  <TextType 
+                    text={ceoQuotes}
+                    typingSpeed={60}
+                    pauseDuration={2000}
+                    showCursor={true}
+                    cursorCharacter="|"
+                    className="text-blue-400"
+                    variableSpeed={undefined}
+                    onSentenceComplete={undefined}
+                  />
                 </p>
                 <footer className="mt-6 flex items-center justify-between">
                   <div className="flex items-center space-x-3">
@@ -172,7 +194,16 @@ export default function TeamSection() {
                 <h4 className="text-lg font-semibold text-purple-400">Continuous Support</h4>
               </div>
               <blockquote className="text-slate-200 leading-relaxed font-medium italic text-lg">
-                "Ongoing support, so your business never misses a beat."
+                <TextType 
+                  text={supportQuotes}
+                  typingSpeed={70}
+                  pauseDuration={1800}
+                  showCursor={true}
+                  cursorCharacter="|"
+                  className="text-purple-400"
+                  variableSpeed={undefined}
+                  onSentenceComplete={undefined}
+                />
               </blockquote>
             </div>
           </div>

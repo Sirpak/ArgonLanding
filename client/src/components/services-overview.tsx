@@ -1,5 +1,6 @@
 import { Zap, BarChart3, FileText, Settings, ArrowRight, Search, TrendingUp, Users, Shield, Activity, Layers, Code, BookOpen, Monitor, Scale } from "lucide-react";
 import InfiniteScroll from './InfiniteScroll';
+import TextType from './TextType';
 
 export default function ServicesOverview() {
   const beyondAutomationItems = [
@@ -93,6 +94,16 @@ export default function ServicesOverview() {
     }
   ];
 
+  const inspirationalQuotes = [
+    "We make automation simple — no jargon, just results.",
+    "Tell us your problem, we'll design the solution.",
+    "Think of us as your automation partner, not just a vendor.",
+    "Automation is difficult, but we make it look easy.",
+    "We don't just build workflows, we support them.",
+    "Reliable automations, built for real-world businesses.",
+    "Ongoing support, so your business never misses a beat."
+  ];
+
   return (
     <section id="services" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,7 +180,16 @@ export default function ServicesOverview() {
               Beyond Automation
             </h3>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              We make automation simple — no jargon, just results.
+              <TextType 
+                text={inspirationalQuotes}
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor={true}
+                cursorCharacter="|"
+                className="text-emerald-400 font-semibold"
+                variableSpeed={undefined}
+                onSentenceComplete={undefined}
+              />
             </p>
           </div>
           
