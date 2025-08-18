@@ -41,14 +41,14 @@ export default function AutomationToolkit() {
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600/20 to-orange-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Gavel className="w-4 h-4" />
-            Technology Stack
+            We make automation simple — no jargon, just results
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-            Your Automation Toolkit, Unlocked
+          Automations pay for themselves by giving your team hours back every week
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            We're certified partners with leading automation platforms and build custom solutions when needed.
-          </p>
+          Powered by tools you already use, enhanced by automation. Tell us your problem, we’ll design the solution.
+</p>
         </div>
 
         {/* Technology Grid */}

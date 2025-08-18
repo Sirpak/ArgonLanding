@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argon18 - Business Ops & Automation Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        accent: '#f97316', 
+                        secondary: '#64748b',
+                        success: '#10b981'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 font-sans">
+    
+    <!-- Navigation -->
+    <!-- @COMPONENT: Navigation [responsive navigation with dropdown menus] -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-2xl font-bold text-primary">Argon18</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#services" class="text-secondary hover:text-primary transition-colors duration-200 font-medium">Services</a>
+                        <a href="#process" class="text-secondary hover:text-primary transition-colors duration-200 font-medium">Process</a>
+                        <a href="#toolkit" class="text-secondary hover:text-primary transition-colors duration-200 font-medium">Solutions</a>
+                        <a href="#about" class="text-secondary hover:text-primary transition-colors duration-200 font-medium">About</a>
+                        <a href="#contact" class="bg-accent text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-200 font-semibold">Book Consultation</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button data-event="click:toggleMobileMenu" class="text-secondary hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- Hero Section -->
+    <!-- @COMPONENT: HeroSection [main value proposition with CTA] -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-6">
+                        <span class="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold">Business Ops & Automation Experts</span>
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Your stack, <span class="text-accent">overclocked</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-8 text-blue-100 leading-relaxed">
+                        We debug your business: fewer clicks, fewer errors, faster ops. Streamline your productivity like never before.
+                    </p>
+                    <p class="text-lg mb-10 text-blue-200">
+                        As business ops and automation experts, we do so much more than automate your processes. We understand the big picture of your business, strategize the best software and automation solutions, and then implement those solutions seamlessly.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 text-center">
+                            Book a 20-minute automation triage
+                        </a>
+                        <a href="#services" class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 text-center">
+                            See How We Help
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Modern office technology with automation dashboard -->
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Modern office with automation dashboard" class="rounded-xl shadow-2xl" />
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-success/20 p-3 rounded-lg">
+                                <i class="fas fa-chart-line text-success text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-primary">89%</div>
+                                <div class="text-sm text-secondary">Time Saved</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- Problem Statement Section -->
+    <!-- @COMPONENT: ProblemSection [client pain points with testimonial quotes] -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Which business process would you prefer not to think about?
+                </h2>
+                <p class="text-xl text-secondary max-w-3xl mx-auto">
+                    We'll put your business operations into a Flow state — automating them all so you barely have to lift a finger.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- @MAP: problemAreas.map(area => ( -->
+                <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-red-100 p-2 rounded-lg flex-shrink-0">
+                            <i class="fas fa-quote-left text-red-600"></i>
+                        </div>
+                        <p class="text-gray-700 italic" data-mock="true">"Everyone talks about how amazing Zapier is, but no one said how hard it would be to implement!"</p>
+                    </div>
+                </div>
+                
+                <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-orange-100 p-2 rounded-lg flex-shrink-0">
+                            <i class="fas fa-quote-left text-orange-600"></i>
+                        </div>
+                        <p class="text-gray-700 italic" data-mock="true">"We thought these apps would simplify our workflows, but we're spending half our time playing whack-a-mole with bugs."</p>
+                    </div>
+                </div>
+                
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-yellow-100 p-2 rounded-lg flex-shrink-0">
+                            <i class="fas fa-quote-left text-yellow-600"></i>
+                        </div>
+                        <p class="text-gray-700 italic" data-mock="true">"I can't spend my days watching workflow automation tutorials. I've got a business to run!"</p>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+
+            <!-- Business Process Tags -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-red-500 text-white px-6 py-3 rounded-full font-semibold">Sales pipeline</span>
+                <span class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold">Data management</span>
+                <span class="bg-accent text-white px-6 py-3 rounded-full font-semibold">Project management</span>
+                <span class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold">Lead generation</span>
+                <span class="bg-purple-600 text-white px-6 py-3 rounded-full font-semibold">Onboarding</span>
+                <span class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold">Customer support</span>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ProblemSection -->
+
+    <!-- Services Section -->
+    <!-- @COMPONENT: ServicesSection [4-tier service packages with pricing] -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Your automation toolkit, unlocked
+                </h2>
+                <p class="text-xl text-secondary max-w-3xl mx-auto">
+                    As certified partners with the world's leading automation platforms, our automation consultations have the expertise to supercharge your tech stack.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
+                <!-- Automation Audit -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="bg-blue-600 p-6 text-white">
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-search text-3xl"></i>
+                            <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Popular</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Automation Audit</h3>
+                        <p class="text-blue-100">Diagnose + ROI</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <span class="text-3xl font-bold text-gray-900">$199</span>
+                            <span class="text-secondary">-$499</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">60-90 min discovery session</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Process mapping & analysis</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Automation opportunities shortlist</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">ROI estimate & timeline</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Blueprint -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="bg-purple-600 p-6 text-white">
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-blueprint text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Blueprint</h3>
+                        <p class="text-purple-100">Scope + Architecture</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <span class="text-3xl font-bold text-gray-900">$1k</span>
+                            <span class="text-secondary">-$2.5k</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Technical diagrams & data flow</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Complete app integration list</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Acceptance criteria definition</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Timeline & fixed bid proposal</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                            Get Blueprint
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Builds -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border-2 border-accent">
+                    <div class="bg-accent p-6 text-white">
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-cogs text-3xl"></i>
+                            <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">Featured</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Builds</h3>
+                        <p class="text-orange-100">Implementation</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <span class="text-3xl font-bold text-gray-900">$1.5k</span>
+                            <span class="text-secondary">-$8k</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Zapier/n8n/custom code implementation</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Comprehensive testing & QA</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Documentation & training</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Launch support & rollback plan</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-accent text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
+                            Start Building
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Managed Automations -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                    <div class="bg-green-600 p-6 text-white">
+                        <div class="flex items-center justify-between mb-4">
+                            <i class="fas fa-headset text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Managed</h3>
+                        <p class="text-green-100">Ongoing Support</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <span class="text-3xl font-bold text-gray-900">$750</span>
+                            <span class="text-secondary">-$3k/mo</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">24/7 monitoring & alerts</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Break-fix & optimization</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">New mini-flows each month</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-success text-sm mt-1"></i>
+                                <span class="text-sm text-gray-600">Monthly health reports</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                            Get Managed
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ServicesSection -->
+
+    <!-- Technology Stack Section -->
+    <!-- @COMPONENT: TechStackSection [partner logos and integrations grid] -->
+    <section id="toolkit" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Your automation toolkit, unlocked
+                </h2>
+                <p class="text-lg text-secondary max-w-2xl mx-auto">
+                    As certified partners with the world's leading automation platforms, our automation consultations have the expertise to supercharge your tech stack.
+                </p>
+            </div>
+
+            <!-- Partner Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+                <!-- Row 1 -->
+                <div class="bg-yellow-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-yellow-700 text-lg" data-mock="true">Zapier</span>
+                </div>
+                <div class="bg-red-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-red-700 text-lg" data-mock="true">HubSpot</span>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-gray-700 text-lg" data-mock="true">Typeform</span>
+                </div>
+                <div class="bg-orange-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-orange-700 text-lg" data-mock="true">Airtable</span>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-blue-700 text-lg" data-mock="true">Salesforce</span>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-purple-700 text-lg" data-mock="true">Make</span>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="bg-green-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-green-700 text-lg" data-mock="true">Keap</span>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-blue-700 text-lg" data-mock="true">n8n</span>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-gray-700 text-lg" data-mock="true">Slack</span>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-purple-700 text-lg" data-mock="true">Airtable</span>
+                </div>
+                <div class="bg-black text-white p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-lg" data-mock="true">Pipedrive</span>
+                </div>
+                <div class="bg-pink-50 p-6 rounded-xl w-full flex items-center justify-center h-20">
+                    <span class="font-bold text-pink-700 text-lg" data-mock="true">Make</span>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-lg text-secondary mb-6">Don't see your tools? We integrate with 3,000+ applications.</p>
+                <a href="#contact" class="text-accent hover:text-orange-600 font-semibold text-lg">
+                    Ask about custom integrations <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TechStackSection -->
+
+    <!-- Process Section -->
+    <!-- @COMPONENT: ProcessSection [step-by-step client journey visualization] -->
+    <section id="process" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Make your projects run like clockwork
+                </h2>
+                <p class="text-lg text-secondary max-w-2xl mx-auto">
+                    Keep your team on track and your projects moving forward — and say goodbye to manual task assignments, endless status updates, and last-minute scrambles to meet deadlines.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Examples of what we can do</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="bg-success p-2 rounded-lg flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Automate task creation and assignment based on predefined rules</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="bg-success p-2 rounded-lg flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Provide real-time project status updates and trigger workflows based on progress</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="bg-success p-2 rounded-lg flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Set smart deadline reminders and escalations to keep your team accountable</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="bg-success p-2 rounded-lg flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Allocate resources automatically based on project needs and team availability</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="bg-success p-2 rounded-lg flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Track time and calculate billable hours effortlessly</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="bg-success p-2 rounded-lg flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Generate and send automated progress reports to stakeholders</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="bg-success p-2 rounded-lg flex-shrink-0 mt-1">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Integrate with communication tools like Slack and Teams for seamless collaboration</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#contact" class="text-accent hover:text-orange-600 font-semibold">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Professional team collaboration workspace -->
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Professional team collaboration workspace" class="rounded-xl shadow-lg" />
+                </div>
+            </div>
+
+            <!-- Process Timeline -->
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-accent/20"></div>
+                <div class="space-y-12">
+                    <!-- @MAP: processSteps.map((step, index) => ( -->
+                    <div class="relative flex items-center justify-between">
+                        <div class="w-5/12 text-right pr-8">
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Discover</h4>
+                                <p class="text-secondary">Deep dive into your current processes, pain points, and goals to identify automation opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">
+                            1
+                        </div>
+                        <div class="w-5/12"></div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between">
+                        <div class="w-5/12"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">
+                            2
+                        </div>
+                        <div class="w-5/12 pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Blueprint</h4>
+                                <p class="text-secondary">Create detailed technical specifications, data flow diagrams, and implementation roadmap with acceptance criteria.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between">
+                        <div class="w-5/12 text-right pr-8">
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Build</h4>
+                                <p class="text-secondary">Implement automations using best-in-class tools, custom code where needed, with comprehensive testing.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">
+                            3
+                        </div>
+                        <div class="w-5/12"></div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between">
+                        <div class="w-5/12"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">
+                            4
+                        </div>
+                        <div class="w-5/12 pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-lg">
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Launch & Monitor</h4>
+                                <p class="text-secondary">Deploy with staging, train your team, provide documentation, and maintain ongoing monitoring with optimization.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ProcessSection -->
+
+    <!-- Success Metrics Section -->
+    <!-- @COMPONENT: MetricsSection [ROI and performance indicators] -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">
+                    Success metrics that matter
+                </h2>
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+                    We don't just promise automation — we deliver measurable results that directly impact your bottom line.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-accent text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2" data-bind="metrics.timeSaved">15-40</div>
+                    <div class="text-blue-200">Hours saved per week</div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-success text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2" data-bind="metrics.responseTime">89%</div>
+                    <div class="text-blue-200">Faster lead response</div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-yellow-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2" data-bind="metrics.errorReduction">95%</div>
+                    <div class="text-blue-200">Error reduction</div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-dollar-sign text-2xl"></i>
+                    </div>
+                    <div class="text-4xl font-bold mb-2" data-bind="metrics.roi">300%</div>
+                    <div class="text-blue-200">Average ROI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: MetricsSection -->
+
+    <!-- Testimonials Section -->
+    <!-- @COMPONENT: TestimonialsSection [client success stories] -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    What our clients say
+                </h2>
+                <p class="text-lg text-secondary max-w-2xl mx-auto">
+                    Don't just take our word for it — hear from businesses that have transformed their operations with our automation solutions.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- @MAP: testimonials.map(testimonial => ( -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic" data-mock="true">
+                        "Argon18 transformed our lead management process. What used to take hours now happens automatically, and we've seen a 300% increase in lead response time."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold">
+                            JS
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900" data-mock="true">John Smith</div>
+                            <div class="text-sm text-secondary" data-mock="true">CEO, TechStart Inc.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic" data-mock="true">
+                        "The project management automation has been a game-changer. Our team now spends time on strategic work instead of status updates and manual reporting."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white font-bold">
+                            MR
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900" data-mock="true">Maria Rodriguez</div>
+                            <div class="text-sm text-secondary" data-mock="true">Operations Director, BuildCorp</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center gap-1 mb-4">
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                        <i class="fas fa-star text-yellow-500"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic" data-mock="true">
+                        "Working with Argon18 was seamless. They understood our complex workflows and delivered solutions that actually work. ROI was achieved in just 3 months."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-success rounded-full flex items-center justify-center text-white font-bold">
+                            DL
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900" data-mock="true">David Lee</div>
+                            <div class="text-sm text-secondary" data-mock="true">Partner, Legal Associates</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: TestimonialsSection -->
+
+    <!-- Contact/CTA Section -->
+    <!-- @COMPONENT: ContactSection [lead capture forms and consultation booking] -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold mb-6">
+                    Ready to overclock your business?
+                </h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Book a 20-minute automation triage to discover how much time and money you could save with the right automation strategy.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-xl text-gray-900">
+                    <h3 class="text-2xl font-bold mb-6">Get Your Free Automation Audit</h3>
+                    <form class="space-y-6" data-implementation="Integrate with lead capture system">
+                        <!-- @STATE: formData:object = {name:'', email:'', company:'', challenge:''} -->
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">First Name</label>
+                                <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent" placeholder="John" required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-2">Last Name</label>
+                                <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent" placeholder="Smith" required />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Business Email</label>
+                            <input type="email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent" placeholder="john@company.com" required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Company Name</label>
+                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent" placeholder="Your Company" required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Biggest Operational Challenge</label>
+                            <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-accent" rows="4" placeholder="Tell us about your biggest time-wasting process..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-accent text-white py-4 rounded-lg font-semibold text-lg hover:bg-orange-600 transition-colors" data-event="click:handleFormSubmit">
+                            Book My Free Audit
+                        </button>
+                        <p class="text-sm text-gray-600 text-center">No spam, just actionable insights. Unsubscribe anytime.</p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Why choose Argon18?</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-accent p-2 rounded-lg flex-shrink-0">
+                                    <i class="fas fa-rocket text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold mb-1">Speed to value</div>
+                                    <div class="text-gray-300">See results in days, not months</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-accent p-2 rounded-lg flex-shrink-0">
+                                    <i class="fas fa-dollar-sign text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold mb-1">SMB-friendly pricing</div>
+                                    <div class="text-gray-300">Transparent packages that fit your budget</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-accent p-2 rounded-lg flex-shrink-0">
+                                    <i class="fas fa-code text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold mb-1">Beyond no-code</div>
+                                    <div class="text-gray-300">We're not limited by connectors — custom solutions when needed</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="bg-accent p-2 rounded-lg flex-shrink-0">
+                                    <i class="fas fa-shield-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold mb-1">Enterprise security</div>
+                                    <div class="text-gray-300">Client-owned workspaces, encrypted credentials, audit trails</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-accent/10 p-6 rounded-xl">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i class="fas fa-star text-accent text-2xl"></i>
+                            <span class="text-xl font-bold">5.0</span>
+                            <span class="text-gray-300">Premier Partner Rating</span>
+                        </div>
+                        <p class="text-gray-300">Certified with leading automation platforms with 100% client satisfaction rate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- Footer -->
+    <!-- @COMPONENT: Footer [company links and legal information] -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="text-2xl font-bold text-white mb-4">Argon18</div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Business ops and automation experts helping SMBs streamline productivity through strategic automation solutions.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Automation Audit</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blueprint Design</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Implementation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Managed Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Argon18. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // Smooth scrolling for navigation links
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // TODO: Implement mobile menu toggle functionality
+            // TODO: Implement form submission handling with validation
+            // TODO: Add scroll-based navigation highlighting
+            // TODO: Implement lazy loading for images
+        })();
+    </script>
+</body>
+</html>

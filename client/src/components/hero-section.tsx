@@ -20,14 +20,14 @@ export default function HeroSection() {
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
             <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Your Business,</span><br />
-            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Overclocked</span>
+            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">with AI and automation</span>
           </h1>
           
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            We debug your business: <span className="text-emerald-400 font-semibold">fewer clicks</span>, 
-            <span className="text-blue-400 font-semibold"> fewer errors</span>, 
-            <span className="text-white font-semibold"> faster ops</span>. 
+            We help add automation to your business: <span className="text-emerald-400 font-semibold">Efficency</span>, 
+            <span className="text-blue-400 font-semibold"> Increase Production</span>, 
+            <span className="text-white font-semibold"> Cut costs, save time and money</span>. 
             Strategic automation that transforms how you work.
           </p>
           
@@ -52,7 +52,7 @@ export default function HeroSection() {
           <div className="flex flex-wrap justify-center items-center gap-8 text-slate-400">
             <div className="flex items-center gap-2">
               <Zap className="w-5 h-5 text-yellow-500" />
-              <span>Days, not months</span>
+              <span>We’ll put your business operations on autopilot — so your workload is reduced</span>
             </div>
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-green-500" />

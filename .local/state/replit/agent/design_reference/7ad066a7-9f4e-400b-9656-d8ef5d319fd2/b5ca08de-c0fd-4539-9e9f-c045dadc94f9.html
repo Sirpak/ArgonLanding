@@ -1,0 +1,809 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Argon18 - Business Automation & Process Optimization Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dark': {
+                            50: '#F8FAFC',
+                            100: '#F1F5F9',
+                            200: '#E2E8F0',
+                            300: '#CBD5E1',
+                            400: '#94A3B8',
+                            500: '#64748B',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1E293B',
+                            900: '#0F172A',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .gradient-border {
+            background: linear-gradient(135deg, #3B82F6, #10B981);
+            padding: 1px;
+            border-radius: 12px;
+        }
+        .gradient-border-inner {
+            background: #1E293B;
+            border-radius: 11px;
+        }
+    </style>
+</head>
+
+<!-- @COMPONENT: AppLayout -->
+<body class="bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900 text-dark-50 font-inter antialiased overflow-x-hidden">
+    
+    <!-- @COMPONENT: Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card border-b border-dark-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+                        Argon18
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#services" class="text-dark-300 hover:text-white transition-colors duration-200">Services</a>
+                        <a href="#process" class="text-dark-300 hover:text-white transition-colors duration-200">Process</a>
+                        <a href="#toolkit" class="text-dark-300 hover:text-white transition-colors duration-200">Toolkit</a>
+                        <a href="#testimonials" class="text-dark-300 hover:text-white transition-colors duration-200">Results</a>
+                        <a href="#contact" class="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button data-mock="true" class="text-dark-300 hover:text-white p-2">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <main class="pt-16">
+        <!-- @COMPONENT: HeroSection -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-emerald-900/20"></div>
+            <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl animate-float"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl animate-float" style="animation-delay: -1.5s;"></div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Main Headline -->
+                    <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                        <span class="bg-gradient-to-r from-white to-dark-300 bg-clip-text text-transparent">Your Business,</span><br>
+                        <span class="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">Overclocked</span>
+                    </h1>
+                    
+                    <!-- Subtitle -->
+                    <p class="text-xl md:text-2xl text-dark-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                        We debug your business: <span class="text-emerald-400 font-semibold">fewer clicks</span>, 
+                        <span class="text-blue-400 font-semibold">fewer errors</span>, 
+                        <span class="text-white font-semibold">faster ops</span>. 
+                        Strategic automation that transforms how you work.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                        <a href="#contact" class="group bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+                            Book 20-Min Automation Triage
+                            <i data-feather="arrow-right" class="inline w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#services" class="glass-card text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-dark-700/60 transition-all duration-300 border border-dark-600/50">
+                            Discover Our Approach
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="flex flex-wrap justify-center items-center gap-8 text-dark-400">
+                        <div class="flex items-center gap-2">
+                            <i data-feather="zap" class="w-5 h-5 text-yellow-500"></i>
+                            <span>Days, not months</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-feather="shield-check" class="w-5 h-5 text-green-500"></i>
+                            <span>Enterprise security</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-feather="trending-up" class="w-5 h-5 text-blue-500"></i>
+                            <span>Proven ROI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: HeroSection -->
+
+        <!-- @COMPONENT: ServicesOverview -->
+        <section id="services" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-20 animate-slide-up">
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600/20 to-emerald-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                        <i data-feather="layers" class="w-4 h-4"></i>
+                        What We Do
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-dark-300 bg-clip-text text-transparent">
+                        Beyond Automation
+                    </h2>
+                    <p class="text-xl text-dark-300 max-w-3xl mx-auto">
+                        We understand the big picture of your business, strategize the best solutions, 
+                        and implement them seamlessly for unprecedented productivity.
+                    </p>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- @MAP: services.map(service => ( -->
+                    <div class="glass-card p-8 rounded-2xl hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="search" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white">Strategic Analysis</h3>
+                        <p class="text-dark-300 leading-relaxed">
+                            Deep-dive into your operations to identify automation opportunities, 
+                            bottlenecks, and optimization potential across your entire tech stack.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="settings" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white">Custom Implementation</h3>
+                        <p class="text-dark-300 leading-relaxed">
+                            Seamless integration of automation solutions using Zapier, n8n, 
+                            and custom code to connect your CRMs, email, docs, and finance tools.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="trending-up" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white">Continuous Optimization</h3>
+                        <p class="text-dark-300 leading-relaxed">
+                            Ongoing monitoring, refinement, and enhancement of your automated workflows 
+                            to ensure peak performance and ROI.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="users" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white">Team Training</h3>
+                        <p class="text-dark-300 leading-relaxed">
+                            Comprehensive training and documentation to ensure your team 
+                            maximizes the value of new automated processes.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="shield" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white">Security & Compliance</h3>
+                        <p class="text-dark-300 leading-relaxed">
+                            Enterprise-grade security practices, credential management, 
+                            and compliance documentation for peace of mind.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="activity" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4 text-white">Performance Analytics</h3>
+                        <p class="text-dark-300 leading-relaxed">
+                            Detailed reporting on time saved, error reduction, and productivity gains 
+                            to measure and communicate value.
+                        </p>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: ServicesOverview -->
+
+        <!-- @COMPONENT: ProcessVisualization -->
+        <section id="process" class="py-24 bg-gradient-to-b from-dark-800/50 to-dark-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-20">
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600/20 to-blue-600/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                        <i data-feather="map" class="w-4 h-4"></i>
+                        Our Process
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-dark-300 bg-clip-text text-transparent">
+                        From Discovery to Delivery
+                    </h2>
+                    <p class="text-xl text-dark-300 max-w-3xl mx-auto">
+                        A proven methodology that ensures your automation project delivers maximum value with minimal disruption.
+                    </p>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="grid lg:grid-cols-6 gap-8">
+                    <!-- @MAP: processSteps.map(step => ( -->
+                    <div class="relative group">
+                        <!-- Step Card -->
+                        <div class="glass-card p-6 rounded-2xl text-center hover:bg-dark-700/40 transition-all duration-300">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <span class="text-white font-bold text-lg">1</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Discover</h3>
+                            <p class="text-dark-300 text-sm">Process mapping & opportunity identification</p>
+                        </div>
+                        <!-- Connector Line -->
+                        <div class="hidden lg:block absolute top-1/2 left-full w-8 h-0.5 bg-gradient-to-r from-blue-500 to-emerald-500 transform -translate-y-1/2"></div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="glass-card p-6 rounded-2xl text-center hover:bg-dark-700/40 transition-all duration-300">
+                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <span class="text-white font-bold text-lg">2</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Blueprint</h3>
+                            <p class="text-dark-300 text-sm">Detailed architecture & implementation plan</p>
+                        </div>
+                        <div class="hidden lg:block absolute top-1/2 left-full w-8 h-0.5 bg-gradient-to-r from-emerald-500 to-purple-500 transform -translate-y-1/2"></div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="glass-card p-6 rounded-2xl text-center hover:bg-dark-700/40 transition-all duration-300">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <span class="text-white font-bold text-lg">3</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Build</h3>
+                            <p class="text-dark-300 text-sm">Development, testing & integration</p>
+                        </div>
+                        <div class="hidden lg:block absolute top-1/2 left-full w-8 h-0.5 bg-gradient-to-r from-purple-500 to-orange-500 transform -translate-y-1/2"></div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="glass-card p-6 rounded-2xl text-center hover:bg-dark-700/40 transition-all duration-300">
+                            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <span class="text-white font-bold text-lg">4</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Test</h3>
+                            <p class="text-dark-300 text-sm">User acceptance testing & validation</p>
+                        </div>
+                        <div class="hidden lg:block absolute top-1/2 left-full w-8 h-0.5 bg-gradient-to-r from-orange-500 to-red-500 transform -translate-y-1/2"></div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="glass-card p-6 rounded-2xl text-center hover:bg-dark-700/40 transition-all duration-300">
+                            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <span class="text-white font-bold text-lg">5</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Launch</h3>
+                            <p class="text-dark-300 text-sm">Deployment & team training</p>
+                        </div>
+                        <div class="hidden lg:block absolute top-1/2 left-full w-8 h-0.5 bg-gradient-to-r from-red-500 to-teal-500 transform -translate-y-1/2"></div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="glass-card p-6 rounded-2xl text-center hover:bg-dark-700/40 transition-all duration-300">
+                            <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <span class="text-white font-bold text-lg">6</span>
+                            </div>
+                            <h3 class="text-lg font-semibold text-white mb-2">Optimize</h3>
+                            <p class="text-dark-300 text-sm">Monitoring & continuous improvement</p>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: ProcessVisualization -->
+
+        <!-- @COMPONENT: AutomationToolkit -->
+        <section id="toolkit" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-20">
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600/20 to-orange-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                        <i data-feather="tool" class="w-4 h-4"></i>
+                        Technology Stack
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-dark-300 bg-clip-text text-transparent">
+                        Your Automation Toolkit, Unlocked
+                    </h2>
+                    <p class="text-xl text-dark-300 max-w-3xl mx-auto">
+                        We're certified partners with leading automation platforms and build custom solutions when needed.
+                    </p>
+                </div>
+
+                <!-- Technology Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-16">
+                    <!-- @MAP: technologies.map(tech => ( -->
+                    <div class="glass-card p-6 rounded-xl text-center hover:bg-dark-700/40 transition-all duration-300 group">
+                        <!-- Zapier logo as colored rectangle -->
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-white font-bold text-xs">Z</span>
+                        </div>
+                        <div class="text-white font-medium text-sm">Zapier</div>
+                        <div class="text-dark-400 text-xs">Certified Partner</div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl text-center hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-white font-bold text-xs">H</span>
+                        </div>
+                        <div class="text-white font-medium text-sm">HubSpot</div>
+                        <div class="text-dark-400 text-xs">Solutions Partner</div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl text-center hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-white font-bold text-xs">SF</span>
+                        </div>
+                        <div class="text-white font-medium text-sm">Salesforce</div>
+                        <div class="text-dark-400 text-xs">Certified</div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl text-center hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-white font-bold text-xs">n8n</span>
+                        </div>
+                        <div class="text-white font-medium text-sm">n8n</div>
+                        <div class="text-dark-400 text-xs">Self-hosted</div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl text-center hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-white font-bold text-xs">AT</span>
+                        </div>
+                        <div class="text-white font-medium text-sm">Airtable</div>
+                        <div class="text-dark-400 text-xs">Expert Level</div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl text-center hover:bg-dark-700/40 transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-white font-bold text-xs">PY</span>
+                        </div>
+                        <div class="text-white font-medium text-sm">Python</div>
+                        <div class="text-dark-400 text-xs">Custom Code</div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+
+                <!-- Capabilities Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="gradient-border">
+                        <div class="gradient-border-inner p-8">
+                            <div class="flex items-center gap-4 mb-6">
+                                <i data-feather="zap" class="w-8 h-8 text-yellow-500"></i>
+                                <h3 class="text-xl font-semibold text-white">Low-Code Automation</h3>
+                            </div>
+                            <p class="text-dark-300 mb-4">
+                                Rapid deployment using Zapier and Make for common integration patterns and workflows.
+                            </p>
+                            <ul class="space-y-2 text-dark-400 text-sm">
+                                <li class="flex items-center gap-2">
+                                    <i data-feather="check" class="w-4 h-4 text-emerald-500"></i>
+                                    CRM to email automation
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-feather="check" class="w-4 h-4 text-emerald-500"></i>
+                                    Lead qualification workflows
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-feather="check" class="w-4 h-4 text-emerald-500"></i>
+                                    Document generation
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="gradient-border">
+                        <div class="gradient-border-inner p-8">
+                            <div class="flex items-center gap-4 mb-6">
+                                <i data-feather="code" class="w-8 h-8 text-blue-500"></i>
+                                <h3 class="text-xl font-semibold text-white">Custom Development</h3>
+                            </div>
+                            <p class="text-dark-300 mb-4">
+                                Bespoke solutions using Python/JavaScript for complex business logic and unique requirements.
+                            </p>
+                            <ul class="space-y-2 text-dark-400 text-sm">
+                                <li class="flex items-center gap-2">
+                                    <i data-feather="check" class="w-4 h-4 text-emerald-500"></i>
+                                    API integrations
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-feather="check" class="w-4 h-4 text-emerald-500"></i>
+                                    Data transformation
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-feather="check" class="w-4 h-4 text-emerald-500"></i>
+                                    Complex workflows
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="gradient-border">
+                        <div class="gradient-border-inner p-8">
+                            <div class="flex items-center gap-4 mb-6">
+                                <i data-feather="database" class="w-8 h-8 text-emerald-500"></i>
+                                <h3 class="text-xl font-semibold text-white">Data Management</h3>
+                            </div>
+                            <p class="text-dark-300 mb-4">
+                                Centralized data stores and reporting solutions using Airtable, Sheets, and BigQuery.
+                            </p>
+                            <ul class="space-y-2 text-dark-400 text-sm">
+                                <li class="flex items-center gap-2">
+                                    <i data-feather="check" class="w-4 h-4 text-emerald-500"></i>
+                                    Analytics dashboards
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-feather="check" class="w-4 h-4 text-emerald-500"></i>
+                                    Data synchronization
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i data-feather="check" class="w-4 h-4 text-emerald-500"></i>
+                                    Automated reporting
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: AutomationToolkit -->
+
+        <!-- @COMPONENT: TestimonialsAndResults -->
+        <section id="testimonials" class="py-24 bg-gradient-to-b from-dark-800/50 to-dark-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-20">
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-teal-600/20 to-purple-600/20 text-teal-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                        <i data-feather="award" class="w-4 h-4"></i>
+                        Success Stories
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-dark-300 bg-clip-text text-transparent">
+                        Transforming Businesses
+                    </h2>
+                    <p class="text-xl text-dark-300 max-w-3xl mx-auto">
+                        Real results from clients who trusted us to overhaul their operations.
+                    </p>
+                </div>
+
+                <!-- Results Metrics -->
+                <div class="grid md:grid-cols-4 gap-8 mb-16">
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent mb-2">85%</div>
+                        <div class="text-dark-300">Time Savings</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-2">72h</div>
+                        <div class="text-dark-300">Per Week Reclaimed</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-orange-400 bg-clip-text text-transparent mb-2">94%</div>
+                        <div class="text-dark-300">Error Reduction</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-emerald-400 bg-clip-text text-transparent mb-2">3.2x</div>
+                        <div class="text-dark-300">ROI Improvement</div>
+                    </div>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- @MAP: testimonials.map(testimonial => ( -->
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="flex items-center gap-1 mb-4">
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                        </div>
+                        <blockquote class="text-dark-200 mb-6 italic">
+                            "Argon18 transformed our quote-to-cash process from days to hours. 
+                            The automation they built saved us 40+ hours per week."
+                        </blockquote>
+                        <div class="flex items-center gap-4">
+                            <!-- Professional headshot of business executive -->
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=120&h=120" alt="Professional business executive" class="w-12 h-12 rounded-full object-cover" data-mock="true" />
+                            <div>
+                                <div class="text-white font-semibold" data-bind="testimonial.name" data-mock="true">Marcus Chen</div>
+                                <div class="text-dark-400 text-sm" data-bind="testimonial.title" data-mock="true">Operations Director</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="flex items-center gap-1 mb-4">
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                        </div>
+                        <blockquote class="text-dark-200 mb-6 italic">
+                            "Their strategic approach uncovered automation opportunities we never knew existed. 
+                            ROI was evident within the first month."
+                        </blockquote>
+                        <div class="flex items-center gap-4">
+                            <!-- Professional headshot of female business leader -->
+                            <img src="https://pixabay.com/get/g28490cd21880aec286312100e18b076b4de703aa19945fd2fc5bfeff9006d979d8d0013a5fad6159cfb38cb6c8a65cae3c6f5e0c43156abdf169efeb2d9cd55e_1280.jpg" alt="Professional female business leader" class="w-12 h-12 rounded-full object-cover" data-mock="true" />
+                            <div>
+                                <div class="text-white font-semibold" data-bind="testimonial.name" data-mock="true">Sarah Johnson</div>
+                                <div class="text-dark-400 text-sm" data-bind="testimonial.title" data-mock="true">CEO, Growth Ventures</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="flex items-center gap-1 mb-4">
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 text-yellow-500 fill-current"></i>
+                        </div>
+                        <blockquote class="text-dark-200 mb-6 italic">
+                            "No more manual invoicing or follow-ups. The team's expertise in 
+                            both technology and business operations is unmatched."
+                        </blockquote>
+                        <div class="flex items-center gap-4">
+                            <!-- Professional headshot of construction company owner -->
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=120&h=120" alt="Professional construction company owner" class="w-12 h-12 rounded-full object-cover" data-mock="true" />
+                            <div>
+                                <div class="text-white font-semibold" data-bind="testimonial.name" data-mock="true">David Rodriguez</div>
+                                <div class="text-dark-400 text-sm" data-bind="testimonial.title" data-mock="true">Founder, BuildCorp</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: TestimonialsAndResults -->
+
+        <!-- @COMPONENT: ContactSection -->
+        <section id="contact" class="py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600/20 to-red-600/20 text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                        <i data-feather="calendar" class="w-4 h-4"></i>
+                        Get Started
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-dark-300 bg-clip-text text-transparent">
+                        Ready to Overclock Your Business?
+                    </h2>
+                    <p class="text-xl text-dark-300 max-w-3xl mx-auto">
+                        Book a 20-minute automation triage call and discover how we can transform your operations.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Contact Form -->
+                    <div class="glass-card p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h3>
+                        
+                        <form class="space-y-6" data-mock="true" data-implementation="Should integrate with booking system or CRM">
+                            <!-- TODO: Implement form submission logic and CRM integration -->
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-dark-300 text-sm font-medium mb-2">First Name</label>
+                                    <input type="text" class="w-full bg-dark-700/50 border border-dark-600 rounded-lg px-4 py-3 text-white placeholder-dark-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="John" data-mock="true">
+                                </div>
+                                <div>
+                                    <label class="block text-dark-300 text-sm font-medium mb-2">Last Name</label>
+                                    <input type="text" class="w-full bg-dark-700/50 border border-dark-600 rounded-lg px-4 py-3 text-white placeholder-dark-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="Doe" data-mock="true">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark-300 text-sm font-medium mb-2">Email</label>
+                                <input type="email" class="w-full bg-dark-700/50 border border-dark-600 rounded-lg px-4 py-3 text-white placeholder-dark-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="john@company.com" data-mock="true">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark-300 text-sm font-medium mb-2">Company</label>
+                                <input type="text" class="w-full bg-dark-700/50 border border-dark-600 rounded-lg px-4 py-3 text-white placeholder-dark-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="Acme Corp" data-mock="true">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-dark-300 text-sm font-medium mb-2">What process would you like to automate?</label>
+                                <textarea rows="4" class="w-full bg-dark-700/50 border border-dark-600 rounded-lg px-4 py-3 text-white placeholder-dark-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors" placeholder="Tell us about your biggest operational challenge..." data-mock="true"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105" data-event="click:handleSubmit" data-implementation="Should validate form and submit to CRM">
+                                Book Free Consultation
+                                <i data-feather="arrow-right" class="inline w-5 h-5 ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Benefits List -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-6">What You'll Get:</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i data-feather="search" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-semibold mb-2">Process Audit</h4>
+                                        <p class="text-dark-300">Complete analysis of your current workflows and automation opportunities.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i data-feather="target" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-semibold mb-2">ROI Estimate</h4>
+                                        <p class="text-dark-300">Detailed projection of time savings and productivity gains.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                                        <i data-feather="map" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white font-semibold mb-2">Implementation Roadmap</h4>
+                                        <p class="text-dark-300">Clear timeline and next steps to get your automation project started.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Info -->
+                        <div class="glass-card p-6 rounded-xl">
+                            <h4 class="text-white font-semibold mb-4">Prefer to talk first?</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3 text-dark-300">
+                                    <i data-feather="mail" class="w-5 h-5 text-blue-400"></i>
+                                    <span data-mock="true">hello@argon18.com</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-dark-300">
+                                    <i data-feather="phone" class="w-5 h-5 text-emerald-400"></i>
+                                    <span data-mock="true">(555) 123-4567</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: ContactSection -->
+    </main>
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-dark-900 border-t border-dark-700/50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-4">
+                        Argon18
+                    </div>
+                    <p class="text-dark-400 mb-6 max-w-md">
+                        Business automation and process optimization experts. 
+                        We debug your business so you can focus on growth.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-dark-700 hover:bg-dark-600 rounded-lg flex items-center justify-center transition-colors" data-mock="true">
+                            <i data-feather="linkedin" class="w-5 h-5 text-dark-300"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-dark-700 hover:bg-dark-600 rounded-lg flex items-center justify-center transition-colors" data-mock="true">
+                            <i data-feather="twitter" class="w-5 h-5 text-dark-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-dark-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Automation Audit</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Process Blueprint</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Custom Implementation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Managed Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-dark-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-dark-700/50 mt-12 pt-8 text-center text-dark-400">
+                <p>&copy; 2024 Argon18. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // Initialize Feather Icons
+        (function() {
+            feather.replace();
+        })();
+
+        // Smooth scrolling for navigation links
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        })();
+
+        // TODO: Implement form validation and submission logic
+        // TODO: Add mobile menu toggle functionality  
+        // TODO: Implement booking system integration
+        // TODO: Add analytics tracking for user interactions
+    </script>
+</body>
+<!-- @END_COMPONENT: AppLayout -->
+</html>

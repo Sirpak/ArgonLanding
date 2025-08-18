@@ -10,8 +10,10 @@ export default function Footer() {
               Argon18
             </div>
             <p className="text-slate-400 mb-6 max-w-md">
-              Business automation and process optimization experts. 
+              Business automation and process optimization experts.
+              We are Software Engineers, Prodjecy Managers, and Technology Enthusiasts. 
               We debug your business so you can focus on growth.
+              "It's not what you know it's what you know" - Aristotle
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-lg flex items-center justify-center transition-colors">
@@ -27,7 +29,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-slate-400">
               <li><a href="#" className="hover:text-white transition-colors">Automation Audit</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Process Blueprint</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">The Process </a></li>
               <li><a href="#" className="hover:text-white transition-colors">Custom Implementation</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Managed Services</a></li>
             </ul>
