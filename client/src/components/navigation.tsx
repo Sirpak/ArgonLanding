@@ -22,7 +22,7 @@ export default function Navigation() {
               <img 
                 src="/covemind2.png" 
                 alt="Covemind" 
-                className="h-8 w-48 object-cover"
+                className="h-12 w-52 object-contain py-1"
               />
             </div>
           </div>
