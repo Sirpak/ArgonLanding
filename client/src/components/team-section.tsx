@@ -55,35 +55,11 @@ export default function TeamSection() {
   };
 
   const ceoQuotes = [
-    "We help small businesses do more with less by automating the repetitive tasks that slow them down.",
-    "Your team should focus on growth, not manual busywork.",
-    "We connect your tools so your business runs seamlessly.",
-    "Automating routine tasks to save your team time, allowing them to focus on what really matters.",
-    "Turn time-consuming tasks into background processes.",
-    "Work smarter, not harder — let automation handle the grind.",
-    "Your resources are valuable — we'll help you use them more wisely.",
-    "Automations pay for themselves by giving your team hours back every week.",
-    "Save time, reduce errors, and scale faster.",
-    "We transform your business through our proven process. We create tailor-made solutions that deliver more efficient ways to get work done by combining the tools you already use with automation and AI.",
-    "Efficiency that compounds — every workflow saves time forever.",
-    "Cut costs, boost productivity, and reclaim your team's focus.",
-    "We make automation simple — no jargon, just results.",
-    "Tell us your problem, we'll design the solution.",
-    "Think of us as your automation partner, not just a service.",
-    "Automation is difficult, so rely on experts to help you get it right from the start.",
-    "Simple solutions to complex problems.",
-    "Automation you'll actually understand and use.",
-    "We don't just build workflows, we support them.",
-    "Reliable automations, built for real-world businesses.",
-    "Ongoing support, so your business never misses a beat.",
-    "We're with you at every step — from idea to execution to ongoing care.",
-    "Automation you can trust, built for people not just systems.",
-    "Custom workflows tailored to your business, not cookie-cutter templates.",
-    "Powered by tools you already use, enhanced by automation.",
-    "Affordable automation for SMBs — no enterprise price tag.",
-    "Automation designed for small businesses, not Fortune 500s.",
-    "Tailored to your workflow, built to grow with you.",
-    "Your competitive edge — faster, leaner, smarter operations."
+    "It's not what you can't do, it's what you can't learn.",
+    "Being kind doesn't cost anything.",
+    "If you're not getting into AI now, the market will eventually force you into implementing it one way or another. Get in front of this, now.",
+    "Automation is going to disrupt a lot of industries, businesses both big and small. We want to get you ready for that. Even if you think your business is immune, I would think again.",
+    "We don't overpromise and we don't underdeliver. I believe in honesty, transparency, and being direct both in business and in life."
   ];
 
   const supportQuotes = [
