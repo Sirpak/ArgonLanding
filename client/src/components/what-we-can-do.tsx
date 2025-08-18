@@ -29,7 +29,7 @@ const workflows: WorkflowWidget[] = [
     description: "We then connect the apps you already use—think QuickBooks/Xero, HubSpot, Gmail/Google Drive, Google Calendar, Twilio, Shopify—and stitch them together with triggers, data transforms, and guardrails.",
     tools: ["QuickBooks", "Xero", "HubSpot", "Gmail", "Google Drive", "Google Calendar", "Twilio", "Shopify"],
     icon: <Play className="w-8 h-8" />,
-    position: { x: 0, y: 400 },
+    position: { x: 0, y: 500 },
     connections: ["accounting", "law", "medical", "ecommerce"],
     category: "integration"
   },
@@ -39,7 +39,7 @@ const workflows: WorkflowWidget[] = [
     description: "Auto-create invoices when a deal is marked 'Closed Won,' email the PDF to your client, and file it to the right Drive folder.",
     tools: ["QuickBooks Online", "Gmail", "Google Drive"],
     icon: <DollarSign className="w-8 h-8" />,
-    position: { x: -600, y: 800 },
+    position: { x: -700, y: 1000 },
     connections: ["integration"],
     category: "industry"
   },
@@ -49,7 +49,7 @@ const workflows: WorkflowWidget[] = [
     description: "Generate engagement letters from a Doc template, send for e-signature via DocuSign's API, store the signed PDF in Drive, and notify your channel.",
     tools: ["Google Docs", "DocuSign", "Google Drive", "Slack"],
     icon: <FileText className="w-8 h-8" />,
-    position: { x: -300, y: 800 },
+    position: { x: -350, y: 1000 },
     connections: ["integration"],
     category: "industry"
   },
@@ -59,7 +59,7 @@ const workflows: WorkflowWidget[] = [
     description: "Watch new bookings, create/adjust calendar events, and send SMS reminders with reschedule links.",
     tools: ["Calendly", "Google Calendar", "Twilio"],
     icon: <Calendar className="w-8 h-8" />,
-    position: { x: 0, y: 800 },
+    position: { x: 0, y: 1000 },
     connections: ["integration"],
     category: "industry"
   },
@@ -69,7 +69,7 @@ const workflows: WorkflowWidget[] = [
     description: "Sync new orders to accounting, flag failed or high-risk payments, and alert your team.",
     tools: ["Shopify", "Stripe", "Xero"],
     icon: <ShoppingCart className="w-8 h-8" />,
-    position: { x: 300, y: 800 },
+    position: { x: 350, y: 1000 },
     connections: ["integration"],
     category: "industry"
   },
@@ -79,7 +79,7 @@ const workflows: WorkflowWidget[] = [
     description: "We operate your automations: monitoring, alerts, tweaks, and change requests. You get fewer clicks, fewer errors, and clear ROI—without swapping your whole stack.",
     tools: ["Monitoring", "Alerts", "Analytics"],
     icon: <Users className="w-8 h-8" />,
-    position: { x: 0, y: 1200 },
+    position: { x: 0, y: 1500 },
     connections: ["integration"],
     category: "operations"
   }
@@ -106,7 +106,7 @@ export default function WhatWeCanDo() {
         </div>
 
         {/* Floating Workflow Widgets */}
-        <div className="relative min-h-[1400px]">
+        <div className="relative min-h-[1800px]">
           {/* Connection Lines */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none">
             {workflows.map((workflow) => 
