@@ -279,20 +279,20 @@ export default function AutomationPipeline() {
                   background: 'radial-gradient(166.55% 283.86% at -39.88% 50%, rgba(255, 255, 255, 0) 65.64%, hsla(184, 100%, 50%, 0.48) 99%)'
                 }}
               >
-                <div className="box-1 box flex w-full justify-around mb-8 gap-5">
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                <div className="box-1 box flex w-full justify-around mb-8 gap-8">
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
                 </div>
-                <div className="box-2 box flex w-full justify-around mb-8 gap-5">
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                <div className="box-2 box flex w-full justify-around mb-8 gap-8">
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
                 </div>
-                <div className="box-3 box flex w-full justify-around gap-5">
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                <div className="box-3 box flex w-full justify-around gap-8">
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
                 </div>
               </div>
               
@@ -303,20 +303,20 @@ export default function AutomationPipeline() {
                   background: 'radial-gradient(166.55% 283.86% at -39.88% 50%, rgba(255, 255, 255, 0) 65.64%, hsla(184, 100%, 50%, 0.48) 99%)'
                 }}
               >
-                <div className="box-1 box flex w-full justify-around mb-8 gap-5">
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                <div className="box-1 box flex w-full justify-around mb-8 gap-8">
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
                 </div>
-                <div className="box-2 box flex w-full justify-around mb-8 gap-5">
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                <div className="box-2 box flex w-full justify-around mb-8 gap-8">
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
                 </div>
-                <div className="box-3 box flex w-full justify-around gap-5">
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                <div className="box-3 box flex w-full justify-around gap-8">
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
                 </div>
               </div>
             </div>
@@ -368,11 +368,11 @@ export default function AutomationPipeline() {
             </div>
 
             {/* Results Section */}
-            <div className="absolute right-20 top-1/2 transform -translate-y-1/2 space-y-8">
-              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
-              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+            <div className="absolute right-20 top-1/2 transform -translate-y-1/2 space-y-12">
+              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
+              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain rounded-lg" />
             </div>
 
             {/* Animated Rule Indicators */}
