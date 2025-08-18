@@ -230,7 +230,7 @@ export default function ContactSection() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-slate-300">
                   <Mail className="w-5 h-5 text-blue-400" />
-                  <span>hello@argon18.com</span>
+                  <span>hello@covemind.com</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-300">
                   <Phone className="w-5 h-5 text-emerald-400" />

@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-4">
-              Argon18
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+              Covemind
             </div>
             <p className="text-slate-400 mb-6 max-w-md">
               Business automation and process optimization experts.
@@ -47,7 +47,9 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-slate-700/50 mt-12 pt-8 text-center text-slate-400">
-          <p>&copy; 2024 Argon18. All rights reserved.</p>
+          <p className="text-slate-400 text-center">
+            &copy; 2024 Covemind. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

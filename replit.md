@@ -1,10 +1,8 @@
-# Business Automation Platform
+# ArgonLanding - Business Automation Platform
 
-## Overview
+This is a business automation and process optimization platform built for Covemind, a company that specializes in designing, building, and managing automations for small to medium-sized businesses. The platform serves as both a marketing website and consultation request system.
 
-This is a business automation and process optimization platform built for Argon18, a company that specializes in designing, building, and managing automations for small to medium-sized businesses. The platform serves as both a marketing website and consultation request system, targeting companies that need to eliminate manual busywork through strategic automation solutions.
-
-The application showcases Argon18's services including automation audits, process blueprints, custom implementations, and managed automation services. It features a comprehensive landing page with service descriptions, process visualizations, technology stack information, testimonials, and a contact form for consultation requests.
+The application showcases Covemind's services including automation audits, process blueprints, custom implementations, and managed automation services. It features a comprehensive landing page with service descriptions, process visualizations, technology stack information, testimonials, and a contact form for consultation requests.
 
 ## User Preferences
 

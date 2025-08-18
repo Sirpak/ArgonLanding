@@ -171,7 +171,7 @@ export default function AutomationPipeline() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">
-            <img src={argonLogo} alt="Argon18 Logo" className="w-16 h-16" />
+            <img src={argonLogo} alt="Covemind Logo" className="w-16 h-16" />
             <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
               Live Pipeline Demo
             </div>

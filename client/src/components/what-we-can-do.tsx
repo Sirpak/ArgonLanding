@@ -103,6 +103,7 @@ export default function WhatWeCanDo() {
           <p className="text-2xl text-slate-300 max-w-3xl mx-auto">
             Transform your busywork into intelligent, connected workflows that scale with your business
           </p>
+          <h3 className="text-2xl text-slate-300 max-w-3xl mx-auto " style={{marginTop: "40px" }}>These are just a few examples of what we can do for you !</h3>
         </div>
 
         {/* Floating Workflow Widgets */}
