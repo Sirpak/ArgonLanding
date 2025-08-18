@@ -57,6 +57,12 @@ export default function Navigation() {
                 Results
               </button>
               <button
+                onClick={() => scrollToSection("team")}
+                className="text-slate-300 hover:text-white transition-colors duration-200"
+              >
+                Team
+              </button>
+              <button
                 onClick={() => scrollToSection("contact")}
                 className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105"
               >
@@ -109,6 +115,12 @@ export default function Navigation() {
                 className="block w-full text-left px-3 py-2 text-slate-300 hover:text-white transition-colors"
               >
                 Results
+              </button>
+              <button
+                onClick={() => scrollToSection("team")}
+                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-white transition-colors"
+              >
+                Team
               </button>
               <button
                 onClick={() => scrollToSection("contact")}

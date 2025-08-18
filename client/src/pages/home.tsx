@@ -5,6 +5,7 @@ import ProcessVisualization from "@/components/process-visualization";
 import AutomationPipeline from "@/components/automation-pipeline";
 import AutomationToolkit from "@/components/automation-toolkit";
 import TestimonialsResults from "@/components/testimonials-results";
+import TeamSection from "@/components/team-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <AutomationPipeline />
         <AutomationToolkit />
         <TestimonialsResults />
+        <TeamSection />
         <ContactSection />
       </main>
       <Footer />
