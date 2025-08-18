@@ -33,6 +33,12 @@ export default function Navigation() {
                 Services
               </button>
               <button
+                onClick={() => scrollToSection("what-we-can-do")}
+                className="text-slate-300 hover:text-white transition-colors duration-200"
+              >
+                Solutions
+              </button>
+              <button
                 onClick={() => scrollToSection("process")}
                 className="text-slate-300 hover:text-white transition-colors duration-200"
               >
@@ -91,6 +97,12 @@ export default function Navigation() {
                 className="block w-full text-left px-3 py-2 text-slate-300 hover:text-white transition-colors"
               >
                 Services
+              </button>
+              <button
+                onClick={() => scrollToSection("what-we-can-do")}
+                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-white transition-colors"
+              >
+                Solutions
               </button>
               <button
                 onClick={() => scrollToSection("process")}

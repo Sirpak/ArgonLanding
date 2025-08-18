@@ -41,7 +41,7 @@ const cards: StackedCard[] = [
     content: [
       "We build and deploy your automated workflows with minimal disruption to operations.",
       "Our team handles all technical setup, testing, and quality assurance.",
-      "We provide comprehensive training for your team on new automated processes.",
+      "We provide training for your team on new automated processes.",
       "We document everything and provide ongoing support to ensure long-term success."
     ]
   }

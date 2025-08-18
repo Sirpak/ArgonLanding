@@ -141,6 +141,98 @@
     font-size: clamp(3rem, 7vw, 6rem);
     line-height: 1.2;
   }
+
+  /* Floating Workflow Widgets */
+  .workflow-widget {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .workflow-widget:nth-child(2) {
+    animation-delay: -1s;
+  }
+
+  .workflow-widget:nth-child(3) {
+    animation-delay: -2s;
+  }
+
+  .workflow-widget:nth-child(4) {
+    animation-delay: -3s;
+  }
+
+  .workflow-widget:nth-child(5) {
+    animation-delay: -4s;
+  }
+
+  .workflow-widget:nth-child(6) {
+    animation-delay: -5s;
+  }
+
+  .workflow-widget:nth-child(7) {
+    animation-delay: -6s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Connection Line Animations */
+  .connection-line {
+    stroke-dasharray: 10;
+    animation: dash 20s linear infinite;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -1000;
+    }
+  }
+
+  /* Widget Hover Effects */
+  .widget-hover {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .widget-hover:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
+  }
+
+  /* Tool Tag Animations */
+  .tool-tag {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .tool-tag:hover {
+    transform: translateY(-2px) scale(1.05);
+  }
+
+  /* Glow Effects */
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  .glow-emerald {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  }
+
+  /* Pulse Animation for Active Connections */
+  .pulse-connection {
+    animation: pulse-connection 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-connection {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
 }
 
 @keyframes float {

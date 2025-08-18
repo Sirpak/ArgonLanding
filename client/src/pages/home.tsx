@@ -1,6 +1,7 @@
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import ServicesOverview from "@/components/services-overview";
+import WhatWeCanDo from "@/components/what-we-can-do";
 import ProcessVisualization from "@/components/process-visualization";
 import AutomationPipeline from "@/components/automation-pipeline";
 import AutomationToolkit from "@/components/automation-toolkit";
@@ -16,6 +17,7 @@ export default function Home() {
       <main className="pt-16">
         <HeroSection />
         <ServicesOverview />
+        <WhatWeCanDo />
         <ProcessVisualization />
         <AutomationPipeline />
         <AutomationToolkit />

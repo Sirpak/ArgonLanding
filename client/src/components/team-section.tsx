@@ -14,31 +14,31 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: "member-1",
-    name: "David Chen",
-    role: "Automation Architect & Lead Developer",
+    name: "David Czerepak",
+    role: "CEO & Software Engineer",
     image: "https://picsum.photos/id/1005/300/300",
-    alt: "David Chen - Automation Architect",
-    linkedin: "https://linkedin.com/in/davidchen",
-    twitter: "https://twitter.com/davidchen",
-    facebook: "https://facebook.com/davidchen"
+    alt: "David Czerepak - CEO",
+    linkedin: "https://linkedin.com/in/davidczerepak",
+    twitter: "https://twitter.com/davidczerepak",
+    facebook: "https://facebook.com/davidczerepak"
   },
   {
     id: "member-2",
-    name: "Sarah Rodriguez",
-    role: "Business Process Specialist & Project Manager",
+    name: "Swapnil Deb",
+    role: "President & Lead Software Engineer",
     image: "https://picsum.photos/id/1006/300/300",
-    alt: "Sarah Rodriguez - Business Process Specialist",
-    linkedin: "https://linkedin.com/in/sarahrodriguez",
-    twitter: "https://twitter.com/sarahrodriguez"
+    alt: "Swapnil Deb - President",
+    linkedin: "https://linkedin.com/in/swapnild",
+    twitter: "https://twitter.com/swapnild"
   },
   {
     id: "member-3",
-    name: "Michael Thompson",
+    name: "Datha Bindumalam",
     role: "AI Integration Expert & Solutions Engineer",
     image: "https://picsum.photos/id/1007/300/300",
-    alt: "Michael Thompson - AI Integration Expert",
-    linkedin: "https://linkedin.com/in/michaelthompson",
-    twitter: "https://twitter.com/michaelthompson"
+    alt: "Datha Bindumalam - AI Integration Expert",
+    linkedin: "https://linkedin.com/in/dathabindumalam",
+    twitter: "https://twitter.com/dathabindumalam"
   }
 ];
 
@@ -60,6 +60,46 @@ export default function TeamSection() {
           <p className="text-2xl text-slate-300 max-w-3xl mx-auto">
             The experts behind your automation success. We combine technical expertise with business acumen to deliver solutions that transform your operations.
           </p>
+          
+          {/* CEO Quote */}
+          <div className="mt-12 max-w-4xl mx-auto">
+            <div className="relative">
+              {/* Quote Icon */}
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-600 to-emerald-600 rounded-full flex items-center justify-center shadow-lg">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+              </div>
+              
+              {/* Quote Box */}
+              <blockquote className="glass-card p-8 md:p-12 rounded-2xl border-l-4 border-gradient-to-b from-blue-500 to-emerald-500 bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm">
+                <p className="text-xl md:text-2xl text-slate-200 leading-relaxed italic font-light">
+                  "We don't overpromise and we don't underdeliver. I believe in honesty, transparency, and being direct—in business and in life."
+                </p>
+                <footer className="mt-6 flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-emerald-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-semibold text-lg">DC</span>
+                    </div>
+                    <div>
+                      <cite className="text-blue-400 font-semibold text-lg not-italic">David Czerepak</cite>
+                      <p className="text-slate-400 text-sm">CEO & Software Engineer</p>
+                    </div>
+                  </div>
+                  
+                  {/* Decorative Element */}
+                  <div className="hidden md:block">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600/20 to-emerald-600/20 rounded-full flex items-center justify-center">
+                      <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full"></div>
+                    </div>
+                  </div>
+                </footer>
+              </blockquote>
+              
+              {/* Bottom Decoration */}
+              <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-br from-emerald-600 to-blue-600 rounded-full opacity-60"></div>
+            </div>
+          </div>
         </div>
 
         {/* Team Grid */}
@@ -68,7 +108,7 @@ export default function TeamSection() {
             <div key={member.id} className="glass-card p-8 rounded-2xl hover:bg-slate-700/40 transition-all duration-300 group text-center">
               {/* Profile Image */}
               <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-slate-600/50 group-hover:border-blue-500/50 transition-colors duration-300">
+                <div className="w-60 h-60 mx-auto rounded-full overflow-hidden border-4 border-slate-600/50 group-hover:border-blue-500/50 transition-colors duration-300">
                   <img
                     src={member.image}
                     alt={member.alt}
