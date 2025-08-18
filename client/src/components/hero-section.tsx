@@ -15,6 +15,15 @@ export default function HeroSection() {
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl animate-float-delayed"></div>
       
+      {/* Covemind Image - Left Side */}
+      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10">
+        <img 
+          src="/attached_assets/videoframe_covemindpng" 
+          alt="Covemind" 
+          className="w-48 h-48 md:w-64 md:h-64 opacity-30 hover:opacity-50 transition-opacity duration-500 blur-sm hover:blur-none"
+        />
+      </div>
+      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
