@@ -18,7 +18,13 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <div className="text-2xl font-bold text-primary">Covemind</div>
+            <div className="flex items-center">
+              <img 
+                src="/covemind2.png" 
+                alt="Covemind" 
+                className="h-8 w-auto"
+              />
+            </div>
           </div>
           
           {/* Desktop Navigation */}
