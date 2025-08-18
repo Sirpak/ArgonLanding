@@ -79,7 +79,7 @@ const workflows: WorkflowWidget[] = [
     description: "We operate your automations: monitoring, alerts, tweaks, and change requests. You get fewer clicks, fewer errors, and clear ROI—without swapping your whole stack.",
     tools: ["Monitoring", "Alerts", "Analytics"],
     icon: <Users className="w-8 h-8" />,
-    position: { x: 0, y: 1200 },
+    position: { x: 0, y: 1400 },
     connections: ["integration"],
     category: "operations"
   }
@@ -106,7 +106,7 @@ export default function WhatWeCanDo() {
         </div>
 
         {/* Floating Workflow Widgets */}
-        <div className="relative min-h-[1400px]">
+        <div className="relative min-h-[1800px]">
           {/* Animated Connection Lines */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none">
             {/* Main vertical connection from overview to integration */}
@@ -163,7 +163,7 @@ export default function WhatWeCanDo() {
               x1="400"
               y1="500"
               x2="400"
-              y2="1300"
+              y2="1500"
               stroke="#8B5CF6"
               strokeWidth="3"
               className="animate-pulse"
