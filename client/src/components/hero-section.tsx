@@ -18,7 +18,7 @@ export default function HeroSection() {
       {/* Covemind Image - Left Side */}
       <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10">
         <img 
-          src="/attached_assets/covemind.jpg" 
+          src="/covemind.jpg" 
           alt="Covemind" 
           className="w-48 h-48 md:w-64 md:h-64 opacity-30 hover:opacity-50 transition-opacity duration-500 blur-sm hover:blur-none rounded-2xl"
         />
