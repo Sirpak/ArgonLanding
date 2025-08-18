@@ -1,7 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Play, Pause, RotateCcw } from "lucide-react";
 import argonLogo from "@assets/Screenshot from 2025-08-17 20-21-35_1755478316071.png";
-import argonLogoAlt from "@assets/argon_logo_1755478319830.png";
 
 const pipelineSteps = [
   { id: 1, name: "Lead Capture", description: "Form submission triggers automation" },
@@ -11,147 +10,126 @@ const pipelineSteps = [
   { id: 5, name: "Follow-up Email", description: "Personalized welcome sequence starts" }
 ];
 
+interface PipelineNodeProps {
+  position: number;
+  isActive: boolean;
+  step: typeof pipelineSteps[0];
+}
+
+function PipelineNode({ position, isActive, step }: PipelineNodeProps) {
+  return (
+    <div
+      className={`absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-slate-900 border-2 transition-all duration-300 ${
+        isActive
+          ? 'border-purple-400 shadow-lg shadow-purple-400/50 ring-2 ring-purple-400/30'
+          : 'border-cyan-400/75 shadow-md shadow-cyan-400/30'
+      }`}
+      style={{ left: `${position}%` }}
+      title={step.name}
+    />
+  );
+}
+
+interface PipelineTokenProps {
+  isPlaying: boolean;
+  speed: number;
+  onPositionChange: (position: number) => void;
+}
+
+function PipelineToken({ isPlaying, speed, onPositionChange }: PipelineTokenProps) {
+  const [position, setPosition] = useState(12);
+
+  useEffect(() => {
+    if (!isPlaying) return;
+
+    const startTime = Date.now();
+    const duration = speed * 1000; // Convert to milliseconds
+    const startPosition = 12;
+    const endPosition = 88;
+
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = (elapsed % duration) / duration;
+      const currentPosition = startPosition + (endPosition - startPosition) * progress;
+      
+      setPosition(currentPosition);
+      onPositionChange(currentPosition);
+      
+      if (isPlaying) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    const animationId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationId);
+  }, [isPlaying, speed, onPositionChange]);
+
+  return (
+    <div
+      className="absolute top-1/2 w-5 h-5 rounded-full bg-white transform -translate-x-1/2 -translate-y-1/2 shadow-lg"
+      style={{
+        left: `${position}%`,
+        boxShadow: '0 0 0 2px #0f172a inset, 0 0 16px #22d3ee, 0 0 32px #a78bfa'
+      }}
+    />
+  );
+}
+
+interface PipelineTrackProps {
+  speed: number;
+  isPlaying: boolean;
+}
+
+function PipelineTrack({ speed, isPlaying }: PipelineTrackProps) {
+  return (
+    <div className="relative h-36">
+      {/* Background track */}
+      <div className="absolute left-20 right-20 top-1/2 h-3 transform -translate-y-1/2 bg-slate-700 rounded-full shadow-inner" />
+      
+      {/* Animated progress bar */}
+      <div 
+        className="absolute left-20 right-20 top-1/2 h-2.5 transform -translate-y-1/2 rounded-full overflow-hidden"
+        style={{
+          background: 'linear-gradient(90deg, #22d3ee, #a78bfa)',
+          filter: 'drop-shadow(0 0 6px rgba(34, 211, 238, 0.7))'
+        }}
+      >
+        <div 
+          className="absolute inset-0 opacity-65"
+          style={{
+            background: 'repeating-linear-gradient(90deg, #22d3ee 0 12px, transparent 12px 24px)',
+            animation: `flow ${speed}s linear infinite`,
+            animationPlayState: isPlaying ? 'running' : 'paused',
+            filter: 'drop-shadow(0 0 8px rgba(167, 139, 250, 0.7))'
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
 export default function AutomationPipeline() {
   const [isPlaying, setIsPlaying] = useState(true);
   const [speed, setSpeed] = useState(10);
   const [currentStep, setCurrentStep] = useState(0);
-  const tokenRef = useRef<HTMLDivElement>(null);
-  const pipelineRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const styleElement = document.createElement('style');
-    styleElement.textContent = `
-      :root {
-        --flow-duration: ${speed}s;
-        --gutter: 80px;
-        --pipe: #22d3ee;
-        --accent: #a78bfa;
-        --node: #0b1220;
+  const nodePositions = [12, 32, 52, 72, 88];
+
+  const handleTokenPositionChange = (tokenPosition: number) => {
+    // Determine which step the token is closest to
+    let closestStepIndex = 0;
+    let minDistance = Math.abs(tokenPosition - nodePositions[0]);
+    
+    for (let i = 1; i < nodePositions.length; i++) {
+      const distance = Math.abs(tokenPosition - nodePositions[i]);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestStepIndex = i;
       }
-
-      .pipeline-track {
-        position: absolute;
-        left: var(--gutter);
-        right: var(--gutter);
-        top: 50%;
-        height: 12px;
-        transform: translateY(-50%);
-        background: #1e293b;
-        border-radius: 999px;
-        box-shadow: inset 0 0 0 1px #10263c;
-      }
-
-      .pipeline-progress {
-        position: absolute;
-        left: var(--gutter);
-        right: var(--gutter);
-        top: 50%;
-        height: 10px;
-        transform: translateY(-50%);
-        background: linear-gradient(90deg, var(--pipe), var(--accent));
-        border-radius: 999px;
-        mask: linear-gradient(90deg, black 0 50%, transparent 50% 100%);
-        animation: sweep var(--flow-duration) linear infinite;
-        filter: drop-shadow(0 0 6px color-mix(in srgb, var(--pipe) 70%, transparent));
-      }
-
-      @keyframes sweep {
-        from { mask-position: 0 0 }
-        to { mask-position: 100% 0 }
-      }
-
-      .pipeline-dashes {
-        position: absolute;
-        left: var(--gutter);
-        right: var(--gutter);
-        top: 50%;
-        height: 6px;
-        transform: translateY(-50%);
-        background: repeating-linear-gradient(90deg, var(--pipe) 0 12px, transparent 12px 24px);
-        border-radius: 999px;
-        opacity: 0.65;
-        animation: flow var(--flow-duration) linear infinite;
-        filter: drop-shadow(0 0 8px color-mix(in srgb, var(--accent) 70%, transparent));
-      }
-
-      @keyframes flow {
-        to { background-position-x: -400px }
-      }
-
-      .pipeline-token {
-        position: absolute;
-        top: 50%;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background: white;
-        transform: translate(-50%, -50%);
-        box-shadow: 0 0 0 2px #0f172a inset, 0 0 16px var(--pipe), 0 0 32px var(--accent);
-        animation: travel var(--flow-duration) linear infinite;
-      }
-
-      @keyframes travel {
-        from { left: calc(var(--gutter) + 0px) }
-        to { left: calc(100% - var(--gutter) - 0px) }
-      }
-
-      .pipeline-node {
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 18px;
-        height: 18px;
-        border-radius: 999px;
-        background: var(--node);
-        border: 2px solid color-mix(in srgb, var(--pipe) 75%, white);
-        box-shadow: 0 0 10px color-mix(in srgb, var(--pipe) 70%, transparent);
-        transition: all 0.3s ease;
-      }
-
-      .pipeline-node.active {
-        border-color: var(--accent);
-        box-shadow: 0 0 12px var(--accent), 0 0 28px color-mix(in srgb, var(--accent) 70%, transparent);
-        outline: 3px solid color-mix(in srgb, var(--accent) 30%, transparent);
-        outline-offset: 2px;
-      }
-
-      .n1 { left: 12% }
-      .n2 { left: 32% }
-      .n3 { left: 52% }
-      .n4 { left: 72% }
-      .n5 { left: 88% }
-
-      .pipeline-paused .pipeline-progress,
-      .pipeline-paused .pipeline-dashes,
-      .pipeline-paused .pipeline-token {
-        animation-play-state: paused;
-      }
-    `;
-    document.head.appendChild(styleElement);
-
-    return () => {
-      document.head.removeChild(styleElement);
-    };
-  }, [speed]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (isPlaying && tokenRef.current && pipelineRef.current) {
-        const tokenRect = tokenRef.current.getBoundingClientRect();
-        const pipelineRect = pipelineRef.current.getBoundingClientRect();
-        const x = tokenRect.left - pipelineRect.left;
-        const gutter = 80;
-        const w = pipelineRect.width;
-        const stepXs = [0.12, 0.32, 0.52, 0.72, 0.88].map(f => gutter + f * (w - gutter * 2));
-        
-        let idx = 0;
-        while (idx < stepXs.length - 1 && x > stepXs[idx]) idx++;
-        setCurrentStep(idx);
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, [isPlaying]);
+    }
+    
+    setCurrentStep(closestStepIndex);
+  };
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
@@ -159,13 +137,36 @@ export default function AutomationPipeline() {
 
   const resetAnimation = () => {
     setCurrentStep(0);
-    // Force restart animation by briefly pausing and resuming
     setIsPlaying(false);
-    setTimeout(() => setIsPlaying(true), 50);
+    setTimeout(() => setIsPlaying(true), 100);
   };
 
   return (
     <section id="pipeline" className="py-24 bg-gradient-to-b from-slate-900/50 to-slate-800/50">
+      <style>{`
+        @keyframes flow {
+          to { background-position-x: -400px }
+        }
+        .slider::-webkit-slider-thumb {
+          appearance: none;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #22d3ee;
+          cursor: pointer;
+          box-shadow: 0 0 8px rgba(34, 211, 238, 0.5);
+        }
+        .slider::-moz-range-thumb {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #22d3ee;
+          cursor: pointer;
+          border: none;
+          box-shadow: 0 0 8px rgba(34, 211, 238, 0.5);
+        }
+      `}</style>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -203,24 +204,25 @@ export default function AutomationPipeline() {
         </div>
 
         {/* Pipeline Visualization */}
-        <div className={`relative mb-8 ${!isPlaying ? 'pipeline-paused' : ''}`}>
-          <div ref={pipelineRef} className="relative h-36">
-            <div className="pipeline-track"></div>
-            <div className="pipeline-progress"></div>
-            <div className="pipeline-dashes"></div>
-            
-            {/* Moving Token */}
-            <div ref={tokenRef} className="pipeline-token"></div>
-            
-            {/* Nodes */}
-            {pipelineSteps.map((step, index) => (
-              <div
-                key={step.id}
-                className={`pipeline-node n${step.id} ${currentStep === index ? 'active' : ''}`}
-                title={step.name}
-              ></div>
-            ))}
-          </div>
+        <div className="relative mb-8">
+          <PipelineTrack speed={speed} isPlaying={isPlaying} />
+          
+          {/* Moving Token */}
+          <PipelineToken 
+            isPlaying={isPlaying} 
+            speed={speed} 
+            onPositionChange={handleTokenPositionChange}
+          />
+          
+          {/* Pipeline Nodes */}
+          {pipelineSteps.map((step, index) => (
+            <PipelineNode
+              key={step.id}
+              position={nodePositions[index]}
+              isActive={currentStep === index}
+              step={step}
+            />
+          ))}
         </div>
 
         {/* Controls */}
@@ -241,7 +243,7 @@ export default function AutomationPipeline() {
                 max="18"
                 value={speed}
                 onChange={(e) => setSpeed(Number(e.target.value))}
-                className="w-32 h-2 bg-slate-600 rounded-lg appearance-none cursor-pointer"
+                className="w-32 h-2 bg-slate-600 rounded-lg appearance-none cursor-pointer slider"
               />
               <span className="text-xs text-slate-400">{speed}s</span>
             </div>
