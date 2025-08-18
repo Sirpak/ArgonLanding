@@ -1,69 +1,93 @@
-import { Zap, BarChart3, FileText, Settings, ArrowRight } from "lucide-react";
+import { Zap, BarChart3, FileText, Settings, ArrowRight, Search, TrendingUp, Users, Shield, Activity, Layers, Code, BookOpen, Monitor, Scale } from "lucide-react";
 import InfiniteScroll from './InfiniteScroll';
 
 export default function ServicesOverview() {
   const beyondAutomationItems = [
     { 
       content: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-blue-400 mb-2">Automation Audit & ROI Analysis</div>
-          <div className="text-lg text-slate-300">Map processes, find quick wins, estimate hours saved and payback.</div>
+        <div className="flex items-center text-left">
+          <Search className="w-8 h-8 text-blue-400 mr-4 flex-shrink-0" />
+          <div>
+            <div className="text-2xl font-bold text-blue-400 mb-2">Automation Audit & ROI Analysis</div>
+            <div className="text-lg text-slate-300">Map processes, find quick wins, estimate hours saved and payback.</div>
+          </div>
         </div>
       )
     },
     { 
       content: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-emerald-400 mb-2">Process Blueprint & Documentation</div>
-          <div className="text-lg text-slate-300">Create detailed workflows, SOPs, and implementation guides.</div>
+        <div className="flex items-center text-left">
+          <FileText className="w-8 h-8 text-emerald-400 mr-4 flex-shrink-0" />
+          <div>
+            <div className="text-2xl font-bold text-emerald-400 mb-2">Process Blueprint & Documentation</div>
+            <div className="text-lg text-slate-300">Create detailed workflows, SOPs, and implementation guides.</div>
+          </div>
         </div>
       )
     },
     { 
       content: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-purple-400 mb-2">Custom Automation Implementation</div>
-          <div className="text-lg text-slate-300">Build and deploy tailored automation solutions for your business.</div>
+        <div className="flex items-center text-left">
+          <Code className="w-8 h-8 text-purple-400 mr-4 flex-shrink-0" />
+          <div>
+            <div className="text-2xl font-bold text-purple-400 mb-2">Custom Automation Implementation</div>
+            <div className="text-lg text-slate-300">Build and deploy tailored automation solutions for your business.</div>
+          </div>
         </div>
       )
     },
     { 
       content: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-yellow-400 mb-2">Managed Automation Services</div>
-          <div className="text-lg text-slate-300">Ongoing monitoring, maintenance, and optimization of your automations.</div>
+        <div className="flex items-center text-left">
+          <Settings className="w-8 h-8 text-yellow-400 mr-4 flex-shrink-0" />
+          <div>
+            <div className="text-2xl font-bold text-yellow-400 mb-2">Managed Automation Services</div>
+            <div className="text-lg text-slate-300">Ongoing monitoring, maintenance, and optimization of your automations.</div>
+          </div>
         </div>
       )
     },
     { 
       content: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-pink-400 mb-2">Integration & API Development</div>
-          <div className="text-lg text-slate-300">Connect your tools and systems for seamless data flow.</div>
+        <div className="flex items-center text-left">
+          <Layers className="w-8 h-8 text-pink-400 mr-4 flex-shrink-0" />
+          <div>
+            <div className="text-2xl font-bold text-pink-400 mb-2">Integration & API Development</div>
+            <div className="text-lg text-slate-300">Connect your tools and systems for seamless data flow.</div>
+          </div>
         </div>
       )
     },
     { 
       content: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-indigo-400 mb-2">Training & Knowledge Transfer</div>
-          <div className="text-lg text-slate-300">Empower your team to maintain and extend automations.</div>
+        <div className="flex items-center text-left">
+          <BookOpen className="w-8 h-8 text-indigo-400 mr-4 flex-shrink-0" />
+          <div>
+            <div className="text-2xl font-bold text-indigo-400 mb-2">Training & Knowledge Transfer</div>
+            <div className="text-lg text-slate-300">Empower your team to maintain and extend automations.</div>
+          </div>
         </div>
       )
     },
     { 
       content: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-orange-400 mb-2">Performance Monitoring</div>
-          <div className="text-lg text-slate-300">Track automation efficiency and identify optimization opportunities.</div>
+        <div className="flex items-center text-left">
+          <Monitor className="w-8 h-8 text-orange-400 mr-4 flex-shrink-0" />
+          <div>
+            <div className="text-2xl font-bold text-orange-400 mb-2">Performance Monitoring</div>
+            <div className="text-lg text-slate-300">Track automation efficiency and identify optimization opportunities.</div>
+          </div>
         </div>
       )
     },
     { 
       content: (
-        <div className="text-center">
-          <div className="text-2xl font-bold text-teal-400 mb-2">Scalability Planning</div>
-          <div className="text-lg text-slate-300">Design automations that grow with your business needs.</div>
+        <div className="flex items-center text-left">
+          <Scale className="w-8 h-8 text-teal-400 mr-4 flex-shrink-0" />
+          <div>
+            <div className="text-2xl font-bold text-teal-400 mb-2">Scalability Planning</div>
+            <div className="text-lg text-slate-300">Design automations that grow with your business needs.</div>
+          </div>
         </div>
       )
     }
@@ -155,7 +179,7 @@ export default function ServicesOverview() {
               isTilted={true}
               tiltDirection='left'
               autoplay={true}
-              autoplaySpeed={0.1}
+              autoplaySpeed={0.3}
               autoplayDirection="down"
               pauseOnHover={true}
               width="40rem"
