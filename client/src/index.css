@@ -228,6 +228,47 @@
     .workflow-widget:nth-child(7) { top: 2400px !important; }
   }
 
+  /* Workflow Widget Hover Effects */
+  .workflow-widget {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .workflow-widget:hover {
+    transform: scale(110%) translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
+    z-index: 50;
+  }
+
+  /* Animated Connection Lines */
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  /* Flashing Lines */
+  .animate-flash {
+    animation: flash 1.5s ease-in-out infinite;
+  }
+
+  @keyframes flash {
+    0%, 100% {
+      opacity: 1;
+      stroke-width: 2;
+    }
+    50% {
+      opacity: 0.3;
+      stroke-width: 4;
+    }
+  }
+
   /* Inspirational Quote Boxes */
   .quote-box {
     animation: quote-float 8s ease-in-out infinite;

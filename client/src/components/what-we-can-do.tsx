@@ -29,7 +29,7 @@ const workflows: WorkflowWidget[] = [
     description: "We then connect the apps you already use—think QuickBooks/Xero, HubSpot, Gmail/Google Drive, Google Calendar, Twilio, Shopify—and stitch them together with triggers, data transforms, and guardrails.",
     tools: ["QuickBooks", "Xero", "HubSpot", "Gmail", "Google Drive", "Google Calendar", "Twilio", "Shopify"],
     icon: <Play className="w-8 h-8" />,
-    position: { x: 0, y: 500 },
+    position: { x: 0, y: 400 },
     connections: ["accounting", "law", "medical", "ecommerce"],
     category: "integration"
   },
@@ -39,7 +39,7 @@ const workflows: WorkflowWidget[] = [
     description: "Auto-create invoices when a deal is marked 'Closed Won,' email the PDF to your client, and file it to the right Drive folder.",
     tools: ["QuickBooks Online", "Gmail", "Google Drive"],
     icon: <DollarSign className="w-8 h-8" />,
-    position: { x: -700, y: 1000 },
+    position: { x: -600, y: 800 },
     connections: ["integration"],
     category: "industry"
   },
@@ -49,7 +49,7 @@ const workflows: WorkflowWidget[] = [
     description: "Generate engagement letters from a Doc template, send for e-signature via DocuSign's API, store the signed PDF in Drive, and notify your channel.",
     tools: ["Google Docs", "DocuSign", "Google Drive", "Slack"],
     icon: <FileText className="w-8 h-8" />,
-    position: { x: -350, y: 1000 },
+    position: { x: -200, y: 800 },
     connections: ["integration"],
     category: "industry"
   },
@@ -59,7 +59,7 @@ const workflows: WorkflowWidget[] = [
     description: "Watch new bookings, create/adjust calendar events, and send SMS reminders with reschedule links.",
     tools: ["Calendly", "Google Calendar", "Twilio"],
     icon: <Calendar className="w-8 h-8" />,
-    position: { x: 0, y: 1000 },
+    position: { x: 200, y: 800 },
     connections: ["integration"],
     category: "industry"
   },
@@ -69,7 +69,7 @@ const workflows: WorkflowWidget[] = [
     description: "Sync new orders to accounting, flag failed or high-risk payments, and alert your team.",
     tools: ["Shopify", "Stripe", "Xero"],
     icon: <ShoppingCart className="w-8 h-8" />,
-    position: { x: 350, y: 1000 },
+    position: { x: 600, y: 800 },
     connections: ["integration"],
     category: "industry"
   },
@@ -79,7 +79,7 @@ const workflows: WorkflowWidget[] = [
     description: "We operate your automations: monitoring, alerts, tweaks, and change requests. You get fewer clicks, fewer errors, and clear ROI—without swapping your whole stack.",
     tools: ["Monitoring", "Alerts", "Analytics"],
     icon: <Users className="w-8 h-8" />,
-    position: { x: 0, y: 1500 },
+    position: { x: 0, y: 1200 },
     connections: ["integration"],
     category: "operations"
   }
@@ -106,48 +106,84 @@ export default function WhatWeCanDo() {
         </div>
 
         {/* Floating Workflow Widgets */}
-        <div className="relative min-h-[1800px]">
-          {/* Connection Lines */}
+        <div className="relative min-h-[1400px]">
+          {/* Animated Connection Lines */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none">
-            {workflows.map((workflow) => 
-              workflow.connections.map((connectionId) => {
-                const source = workflow;
-                const target = workflows.find(w => w.id === connectionId);
-                if (!target) return null;
-                
-                const isHighlighted = hoveredWidget === source.id || hoveredWidget === target?.id;
-                
-                return (
-                  <line
-                    key={`${source.id}-${connectionId}`}
-                    x1={source.position.x + 150}
-                    y1={source.position.y + 100}
-                    x2={target.position.x + 150}
-                    y2={target.position.y + 100}
-                    stroke={isHighlighted ? "#3B82F6" : "#475569"}
-                    strokeWidth={isHighlighted ? "3" : "2"}
-                    strokeDasharray={isHighlighted ? "0" : "5,5"}
-                    className="transition-all duration-300"
-                  />
-                );
-              })
-            )}
+            {/* Main vertical connection from overview to integration */}
+            <line
+              x1="400"
+              y1="100"
+              x2="400"
+              y2="500"
+              stroke="#3B82F6"
+              strokeWidth="3"
+              className="animate-pulse"
+            />
+            
+            {/* Horizontal connections from integration to industry widgets */}
+            <line
+              x1="400"
+              y1="500"
+              x2="100"
+              y2="900"
+              stroke="#10B981"
+              strokeWidth="2"
+              className="animate-pulse"
+            />
+            <line
+              x1="400"
+              y1="500"
+              x2="300"
+              y2="900"
+              stroke="#10B981"
+              strokeWidth="2"
+              className="animate-pulse"
+            />
+            <line
+              x1="400"
+              y1="500"
+              x2="500"
+              y2="900"
+              stroke="#10B981"
+              strokeWidth="2"
+              className="animate-pulse"
+            />
+            <line
+              x1="400"
+              y1="500"
+              x2="700"
+              y2="900"
+              stroke="#10B981"
+              strokeWidth="2"
+              className="animate-pulse"
+            />
+            
+            {/* Vertical connection from integration to operations */}
+            <line
+              x1="400"
+              y1="500"
+              x2="400"
+              y2="1300"
+              stroke="#8B5CF6"
+              strokeWidth="3"
+              className="animate-pulse"
+            />
           </svg>
 
           {/* Widgets */}
           {workflows.map((workflow) => (
             <div
               key={workflow.id}
-              className={`absolute glass-card p-6 rounded-2xl border-2 transition-all duration-500 cursor-pointer group workflow-widget ${
+              className={`absolute glass-card p-6 rounded-2xl border-2 transition-all duration-500 cursor-pointer group workflow-widget hover:scale-110 hover:z-50 ${
                 hoveredWidget === workflow.id 
-                  ? 'border-blue-500/50 bg-slate-700/60 scale-105 shadow-2xl shadow-blue-500/25' 
+                  ? 'border-blue-500/50 bg-slate-700/60 shadow-2xl shadow-blue-500/25' 
                   : 'border-slate-600/50 hover:border-blue-400/50 hover:bg-slate-700/40'
-              } ${hoveredWidget === workflow.id ? 'workflow-widget-hover' : ''}`}
+              }`}
               style={{
-                left: `${workflow.position.x + 150}px`,
+                left: `${workflow.position.x + 400}px`,
                 top: `${workflow.position.y}px`,
                 width: '300px',
-                zIndex: hoveredWidget === workflow.id ? 10 : 1
+                zIndex: hoveredWidget === workflow.id ? 50 : 1
               }}
               onMouseEnter={() => setHoveredWidget(workflow.id)}
               onMouseLeave={() => setHoveredWidget(null)}
