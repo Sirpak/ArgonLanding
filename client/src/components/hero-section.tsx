@@ -15,22 +15,20 @@ export default function HeroSection() {
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl animate-float-delayed"></div>
       
-      {/* Covemind Image - Left Side */}
-      <div className="absolute left-8 top-1/2 transform -translate-y-1/2 z-10">
-        <img 
-          src="/covemind.jpg" 
-          alt="Covemind" 
-          className="w-48 h-48 md:w-64 md:h-64 opacity-30 hover:opacity-50 transition-opacity duration-500 blur-sm hover:blur-none rounded-2xl"
-        />
-      </div>
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
         <div className="max-w-4xl mx-auto">
-          {/* Main Headline */}
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
-            <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Your Business,</span><br />
-            <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">with AI and automation</span>
-          </h1>
+          {/* Main Headline with Inline Image */}
+          <div className="flex items-center justify-center gap-8 mb-8">
+            <img 
+              src="/covemind.jpg" 
+              alt="Covemind" 
+              className="w-32 h-32 md:w-40 md:h-40 rounded-2xl"
+            />
+            <h1 className="text-6xl md:text-8xl font-bold leading-tight">
+              <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">Your Business,</span><br />
+              <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">with AI and automation</span>
+            </h1>
+          </div>
           
           {/* Subtitle */}
           <p className="text-2xl md:text-3xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
