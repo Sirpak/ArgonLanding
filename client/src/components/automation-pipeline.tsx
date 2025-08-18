@@ -280,37 +280,19 @@ export default function AutomationPipeline() {
                 }}
               >
                 <div className="box-1 box flex w-full justify-around mb-8">
-                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
                 </div>
                 <div className="box-2 box flex w-full justify-around mb-8">
-                  <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
                 </div>
                 <div className="box-3 box flex w-full justify-around">
-                  <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
                 </div>
               </div>
               
@@ -322,37 +304,19 @@ export default function AutomationPipeline() {
                 }}
               >
                 <div className="box-1 box flex w-full justify-around mb-8">
-                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
                 </div>
                 <div className="box-2 box flex w-full justify-around mb-8">
-                  <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
                 </div>
                 <div className="box-3 box flex w-full justify-around">
-                  <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
-                  <div className="w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center overflow-hidden">
-                    <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-                  </div>
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+                  <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
                 </div>
               </div>
             </div>
@@ -405,18 +369,10 @@ export default function AutomationPipeline() {
 
             {/* Results Section */}
             <div className="absolute right-20 top-1/2 transform -translate-y-1/2 space-y-8">
-              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40 overflow-hidden">
-                <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-              </div>
-              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40 overflow-hidden">
-                <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-              </div>
-              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40 overflow-hidden">
-                <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-              </div>
-              <div className="icon flex justify-center items-center w-12 h-12 bg-white rounded-full shadow-lg shadow-slate-400/40 overflow-hidden">
-                <img src={getRandomIcon()} alt="Tool" className="w-8 h-8 object-contain" />
-              </div>
+              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
+              <img src={getRandomIcon()} alt="Tool" className="w-16 h-16 object-contain" />
             </div>
 
             {/* Animated Rule Indicators */}
