@@ -227,6 +227,83 @@
     .workflow-widget:nth-child(6) { top: 600px !important; }
     .workflow-widget:nth-child(7) { top: 720px !important; }
   }
+
+  /* Inspirational Quote Boxes */
+  .quote-box {
+    animation: quote-float 8s ease-in-out infinite;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  .quote-box:nth-child(2) { animation-delay: -1s; }
+  .quote-box:nth-child(3) { animation-delay: -2s; }
+  .quote-box:nth-child(4) { animation-delay: -3s; }
+  .quote-box:nth-child(5) { animation-delay: -4s; }
+  .quote-box:nth-child(6) { animation-delay: -5s; }
+  .quote-box:nth-child(7) { animation-delay: -6s; }
+  .quote-box:nth-child(8) { animation-delay: -7s; }
+  .quote-box:nth-child(9) { animation-delay: -8s; }
+  .quote-box:nth-child(10) { animation-delay: -9s; }
+
+  @keyframes quote-float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-8px) rotate(0.5deg);
+    }
+    50% {
+      transform: translateY(-4px) rotate(-0.5deg);
+    }
+    75% {
+      transform: translateY(-12px) rotate(0.3deg);
+    }
+  }
+
+  .quote-box:hover {
+    animation-play-state: paused;
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Quote Box Color Variations */
+  .quote-box.blue-variant {
+    border-image: linear-gradient(45deg, #3B82F6, #1E40AF) 1;
+  }
+
+  .quote-box.emerald-variant {
+    border-image: linear-gradient(45deg, #10B981, #059669) 1;
+  }
+
+  .quote-box.purple-variant {
+    border-image: linear-gradient(45deg, #8B5CF6, #7C3AED) 1;
+  }
+
+  .quote-box.orange-variant {
+    border-image: linear-gradient(45deg, #F59E0B, #D97706) 1;
+  }
+
+  /* Responsive Quote Layout */
+  @media (max-width: 768px) {
+    .quote-box {
+      position: relative !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      margin-bottom: 2rem;
+      animation: none;
+    }
+    
+    .quote-box:nth-child(1) { top: 0 !important; }
+    .quote-box:nth-child(2) { top: 120px !important; }
+    .quote-box:nth-child(3) { top: 240px !important; }
+    .quote-box:nth-child(4) { top: 360px !important; }
+    .quote-box:nth-child(5) { top: 480px !important; }
+    .quote-box:nth-child(6) { top: 600px !important; }
+    .quote-box:nth-child(7) { top: 720px !important; }
+    .quote-box:nth-child(8) { top: 840px !important; }
+    .quote-box:nth-child(9) { top: 960px !important; }
+    .quote-box:nth-child(10) { top: 1080px !important; }
+  }
 }
 
 @keyframes float {

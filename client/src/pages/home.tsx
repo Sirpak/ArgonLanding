@@ -2,6 +2,7 @@ import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import ServicesOverview from "@/components/services-overview";
 import WhatWeCanDo from "@/components/what-we-can-do";
+import InspirationalQuotes from "@/components/inspirational-quotes";
 import ProcessVisualization from "@/components/process-visualization";
 import AutomationPipeline from "@/components/automation-pipeline";
 import AutomationToolkit from "@/components/automation-toolkit";
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <ServicesOverview />
         <WhatWeCanDo />
+        <InspirationalQuotes />
         <ProcessVisualization />
         <AutomationPipeline />
         <AutomationToolkit />
