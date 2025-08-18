@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Argon18 • Pipeline</title>
+
+  <!-- Tailwind + DaisyUI (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#0f172a;            /* slate-900 */
+      --pipe:#22d3ee;          /* cyan-400  */
+      --accent:#a78bfa;        /* violet-300*/
+      --node:#0b1220;
+      --flow-duration: 10s;    /* speed (lower = faster) */
+      --gutter: 80px;
+    }
+    body{ background:linear-gradient(135deg,#0b1220,#0f172a 55%); }
+
+    /* PIPELINE */
+    .pipeline{ position:relative; height:140px; }
+    .track{
+      position:absolute; left:var(--gutter); right:var(--gutter);
+      top:50%; height:12px; transform:translateY(-50%);
+      background: #1e293b; border-radius:999px;
+      box-shadow: inset 0 0 0 1px #10263c;
+    }
+    .progress{
+      position:absolute; left:var(--gutter); right:var(--gutter);
+      top:50%; height:10px; transform:translateY(-50%);
+      background: linear-gradient(90deg,var(--pipe),var(--accent));
+      border-radius:999px; mask:linear-gradient(90deg,black 0 50%,transparent 50% 100%);
+      animation: sweep var(--flow-duration) linear infinite;
+      filter: drop-shadow(0 0 6px color-mix(in srgb,var(--pipe) 70%, transparent));
+    }
+    @keyframes sweep{ from{ mask-position: 0 0 } to{ mask-position: 100% 0 } }
+
+    .dashes{
+      position:absolute; left:var(--gutter); right:var(--gutter);
+      top:50%; height:6px; transform:translateY(-50%);
+      background: repeating-linear-gradient(90deg, var(--pipe) 0 12px, transparent 12px 24px);
+      border-radius:999px; opacity:.65;
+      animation: flow var(--flow-duration) linear infinite;
+      filter: drop-shadow(0 0 8px color-mix(in srgb,var(--accent) 70%, transparent));
+    }
+    @keyframes flow{ to{ background-position-x: -400px } }
+
+    .token{
+      position:absolute; top:50%; width:20px; height:20px; border-radius:50%;
+      background: white; transform:translate(-50%,-50%);
+      box-shadow:
+        0 0 0 2px var(--bg) inset,
+        0 0 16px var(--pipe), 0 0 32px var(--accent);
+      animation: travel var(--flow-duration) linear infinite;
+    }
+    @keyframes travel{
+      from{ left: calc(var(--gutter) + 0px) }
+      to  { left: calc(100% - var(--gutter) - 0px) }
+    }
+
+    .node{
+      position:absolute; top:50%; transform:translate(-50%,-50%);
+      width:18px; height:18px; border-radius:999px; background:var(--node);
+      border:2px solid color-mix(in srgb,var(--pipe) 75%, white);
+      box-shadow: 0 0 10px color-mix(in srgb,var(--pipe) 70%,transparent);
+    }
+    .node.active{
+      border-color: var(--accent);
+      box-shadow: 0 0 12px var(--accent), 0 0 28px color-mix(in srgb,var(--accent) 70%,transparent);
+      outline: 3px solid color-mix(in srgb,var(--accent) 30%, transparent);
+      outline-offset: 2px;
+    }
+
+    /* positions of 5 nodes across track */
+    .n1{ left:12% } .n2{ left:32% } .n3{ left:52% } .n4{ left:72% } .n5{ left:88% }
+  </style>
+</head>
+<body class="min-h-screen text-white/90">
+  <main class="max-w-6xl mx-auto p-6 md:p-10">
+    <div class="flex items-center gap-3 mb-6">
+      <span class="text-2xl font-bold tracking-tight">Argon18</span>
+      <span class="badge badge-info badge-outline">Demo</span>
+    </div>
+
+    <!-- Example workflow header -->
+    <div class="mb-6 grid gap-3 md:grid-cols-5">
+      <div class="card bg-base-200/30 border border-base-100/20">
+        <div class="card-body p-4"><span class="badge badge-primary">1</span> Intake</div>
+      </div>
+      <div class="card bg-base-200/30 border border-base-100/20">
+        <div class="card-body p-4"><span class="badge badge-primary">2</span> Verify</div>
+      </div>
+      <div class="card bg-base-200/30 border border-base-100/20">
+        <div class="card-body p-4"><span class="badge badge-primary">3</span> CRM</div>
+      </div>
+      <div class="card bg-base-200/30 border border-base-100/20">
+        <div class="card-body p-4"><span class="badge badge-primary">4</span> Slack</div>
+      </div>
+      <div class="card bg-base-200/30 border border-base-100/20">
+        <div class="card-body p-4"><span class="badge badge-primary">5</span> Email</div>
+      </div>
+    </div>
+
+    <!-- Pipeline -->
+    <section class="pipeline mb-6">
+      <div class="track"></div>
+      <div class="progress"></div>
+      <div class="dashes"></div>
+
+      <!-- moving token -->
+      <div id="token" class="token"></div>
+
+      <!-- nodes -->
+      <div class="node n1" data-label="Intake"></div>
+      <div class="node n2" data-label="Verify"></div>
+      <div class="node n3" data-label="CRM"></div>
+      <div class="node n4" data-label="Slack"></div>
+      <div class="node n5" data-label="Email"></div>
+    </section>
+
+    <!-- status / controls -->
+    <div class="flex items-center gap-4">
+      <div class="badge badge-outline">Status:</div>
+      <div id="status" class="font-semibold">Starting…</div>
+
+      <div class="ml-auto flex items-center gap-2">
+        <span class="text-xs opacity-70">Speed</span>
+        <input id="speed" type="range" min="6" max="18" value="10" class="range range-xs w-40" />
+        <button id="pause" class="btn btn-xs">Pause</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // tiny script: light up nodes as the token travels + controls
+    const token = document.getElementById('token');
+    const nodes = [...document.querySelectorAll('.node')];
+    const statusEl = document.getElementById('status');
+    const speed = document.getElementById('speed');
+    const pause = document.getElementById('pause');
+
+    function setSpeed(s){
+      document.documentElement.style.setProperty('--flow-duration', s+'s');
+    }
+    setSpeed(speed.value);
+
+    speed.addEventListener('input', e => setSpeed(e.target.value));
+    pause.addEventListener('click', () => {
+      const running = getComputedStyle(token).animationPlayState !== 'paused';
+      for (const el of [token, document.querySelector('.dashes'), document.querySelector('.progress')]) {
+        el.style.animationPlayState = running ? 'paused' : 'running';
+      }
+      pause.textContent = running ? 'Resume' : 'Pause';
+    });
+
+    // highlight logic
+    const gutter = 80;             // keep in sync with CSS
+    const w = () => document.querySelector('.pipeline').clientWidth;
+    const stepXs = [0.12,0.32,0.52,0.72,0.88].map(f => gutter + f*(w()-gutter*2));
+    function tick(){
+      const rect = token.getBoundingClientRect();
+      const pipeRect = document.querySelector('.pipeline').getBoundingClientRect();
+      const x = rect.left - pipeRect.left;
+      let idx = 0;
+      while (idx < stepXs.length-1 && x > stepXs[idx]) idx++;
+      nodes.forEach((n,i)=> n.classList.toggle('active', i===idx));
+      statusEl.textContent = nodes[idx]?.dataset.label || 'Starting…';
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  </script>
+</body>
+</html>

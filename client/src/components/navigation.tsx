@@ -39,6 +39,12 @@ export default function Navigation() {
                 Process
               </button>
               <button
+                onClick={() => scrollToSection("pipeline")}
+                className="text-slate-300 hover:text-white transition-colors duration-200"
+              >
+                Pipeline
+              </button>
+              <button
                 onClick={() => scrollToSection("toolkit")}
                 className="text-slate-300 hover:text-white transition-colors duration-200"
               >
@@ -85,6 +91,12 @@ export default function Navigation() {
                 className="block w-full text-left px-3 py-2 text-slate-300 hover:text-white transition-colors"
               >
                 Process
+              </button>
+              <button
+                onClick={() => scrollToSection("pipeline")}
+                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-white transition-colors"
+              >
+                Pipeline
               </button>
               <button
                 onClick={() => scrollToSection("toolkit")}
