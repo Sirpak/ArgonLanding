@@ -1,10 +1,11 @@
 import { Search, Settings, TrendingUp, Users, Shield, Activity, Layers } from "lucide-react";
+import StackedList from "./stacked-list";
 
 const services = [
   {
     icon: Search,
-    title: "Strategic Analysis",
-    description: "Deep-dive into your operations to identify automation opportunities, bottlenecks, and optimization potential across your entire tech stack.",
+    title: "Automation Audit & ROI Analysis",
+    description: "Map processes, find quick wins, estimate hours saved and payback.",
     gradient: "from-blue-500 to-blue-600"
   },
   {
@@ -75,6 +76,9 @@ export default function ServicesOverview() {
             );
           })}
         </div>
+
+        {/* Stacked Process Cards */}
+        <StackedList />
       </div>
     </section>
   );

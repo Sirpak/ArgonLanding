@@ -106,6 +106,19 @@
   .animate-slide-up {
     animation: slideUp 0.8s ease-out;
   }
+
+  /* Stacked List Specific Styles */
+  .stacked-card {
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .stacked-card:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+  
+  .stacked-card-selected {
+    box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
+  }
 }
 
 @keyframes float {

@@ -25,7 +25,7 @@ export default function HeroSection() {
           
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            We help add automation to your business: <span className="text-emerald-400 font-semibold">Efficency</span>, 
+            We help add automation to your business: <span className="text-emerald-400 font-semibold">Add Efficency</span>, 
             <span className="text-blue-400 font-semibold"> Increase Production</span>, 
             <span className="text-white font-semibold"> Cut costs, save time and money</span>. 
             Strategic automation that transforms how you work.
@@ -56,7 +56,8 @@ export default function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-green-500" />
-              <span>Enterprise security</span>
+              <span>We build the workflow for you</span>
+            
             </div>
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-blue-500" />
