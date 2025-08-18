@@ -1,0 +1,105 @@
+What We Do (Elevator Pitch)
+We design, build, and manage automations that eliminate manual busywork. We connect CRMs, email, docs, finance, and project tools with Zapier/n8n + custom code so teams ship faster and make fewer mistakes.
+
+Who We Serve (ICP)
+5–250 employee SMBs (agencies, law firms, clinics, e-comm/wholesale, construction).
+
+Ops-heavy teams drowning in repetitive tasks (intake, onboarding, reporting, billing).
+
+Tools already in place (HubSpot/Salesforce, Google/Microsoft, Slack, QuickBooks/Xero).
+
+Problems We Solve
+Lost or slow-responded leads
+
+Manual data entry / double entry
+
+Slow quote-to-cash
+
+Messy onboarding/hand-offs
+
+Support triage & SLA miss
+
+Weekly reporting headaches
+
+Compliance/logging gaps
+
+Offers (Packages)
+Automation Audit (diagnose + ROI)
+– 60–90 min discovery, map processes, shortlist automations, ROI estimate.
+
+Blueprint (scope + architecture)
+– Diagrams, data flow, app list, acceptance criteria, timeline & fixed bid.
+
+Builds (Zapier / n8n / custom code)
+– Implement, test, document, train.
+
+Managed Automations (retainer)
+– Monitoring, break-fix, tweaks, new mini-flows each month.
+
+Fast Pricing Benchmarks (adjust as you like)
+Audit: $199–$499
+
+Blueprint: $1k–$2.5k
+
+Builds: $1.5k–$8k per workflow (complex multi-app flows higher)
+
+Retainers: $750–$3k/mo (monitoring + enhancements)
+
+Hourly (ad-hoc): $100–$175/hr
+
+Process (How We Work)
+Discover → Blueprint → Build → UAT → Launch → Monitor/Optimize
+
+Acceptance tests defined in Blueprint.
+
+Staging where feasible; rollback plan for launches.
+
+Monthly health reports (runs, failures, time saved).
+
+Tech Stack
+Zapier / Make (client-owned workspaces)
+
+n8n (self-hosted / Vercel/Render/AWS) for flexibility & cost control
+
+Custom: Python/JS for webhooks, parsers, API glue
+
+Data stores: Airtable/Sheets/DB as needed; BigQuery for reporting if required
+
+Security & Access (Client-Safe)
+Least-privilege OAuth/API keys; client-owned where possible
+
+Secrets in 1Password/Bitwarden (or client vault)
+
+n8n creds encrypted; audit log of changes; credential inventory & rotation policy
+
+NDA + DPA available when touching PII
+
+Deliverables Every Project Gets
+Process diagram & config notes
+
+Credential inventory (owner, scope, rotation date)
+
+Test cases / runbook / rollback steps
+
+Loom walkthrough & short SOP for the client team
+
+Success Metrics (What We Promise to Move)
+Hours saved/week • Lead response time • Error rate • SLA attainment
+
+Time-to-quote • Time-to-invoice • Time-to-onboard • Ticket backlog
+
+Differentiators
+Speed to value (days, not months)
+
+SMB-friendly pricing + transparent packages
+
+Domain fluency in construction ops (RFIs, submittals, takeoff→estimate handoff)
+
+Both low-code and code (we’re not limited by connectors)
+
+Messaging (Website/Deck Snippets)
+Header: “Your stack, overclocked.”
+
+Sub: “We debug your business: fewer clicks, fewer errors, faster ops.”
+
+CTA: “Book a 20-minute automation triage.”
