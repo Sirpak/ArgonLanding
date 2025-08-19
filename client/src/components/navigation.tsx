@@ -79,7 +79,13 @@ export default function Navigation() {
                       <div className="text-sm font-medium text-gray-500 mb-3">Our Services</div>
                       
                       <div className="space-y-4">
-                        <div className="flex items-start gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer">
+                        <div 
+                          onClick={() => {
+                            setLocation("/automation-captain");
+                            setIsServicesDropdownOpen(false);
+                          }}
+                          className="flex items-start gap-3 p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer"
+                        >
                           <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <Settings className="w-5 h-5 text-red-600" />
                           </div>
@@ -196,7 +202,14 @@ export default function Navigation() {
                 {/* Mobile Services Dropdown */}
                 {isServicesDropdownOpen && (
                   <div className="ml-4 mt-2 space-y-2">
-                    <div className="flex items-start gap-3 p-2 hover:bg-slate-700/50 rounded-lg transition-colors">
+                    <div 
+                      onClick={() => {
+                        setLocation("/automation-captain");
+                        setIsServicesDropdownOpen(false);
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="flex items-start gap-3 p-2 hover:bg-slate-700/50 rounded-lg transition-colors cursor-pointer"
+                    >
                       <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Settings className="w-4 h-4 text-red-600" />
                       </div>
