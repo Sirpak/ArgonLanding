@@ -83,7 +83,7 @@ export default function PricingPage() {
                     </div>
                     <div className="text-gray-600">per hour</div>
                     <div className="text-sm text-gray-500 mt-2">
-                      Depending on your skill level + client size
+                      Depending on the complexity of the task
                     </div>
                   </div>
                   
@@ -155,11 +155,11 @@ export default function PricingPage() {
                 <div className="p-8">
                   <div className="text-center mb-8">
                     <div className="text-4xl font-bold text-gray-900 mb-2">
-                      $250–$500
+                      $250–$2500
                     </div>
                     <div className="text-gray-600">per month</div>
                     <div className="text-sm text-gray-500 mt-2">
-                      Monitoring & light tweaks
+                      Simple Monitoring & light tweaks to complete enterprise automation monitoring and maintenance
                     </div>
                   </div>
                   
