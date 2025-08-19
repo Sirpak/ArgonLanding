@@ -1,14 +1,21 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [, setLocation] = useLocation();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsMobileMenuOpen(false);
+  };
+
+  const navigateToPricing = () => {
+    setLocation("/pricing");
     setIsMobileMenuOpen(false);
   };
 
@@ -78,6 +85,12 @@ export default function Navigation() {
               >
                 Book Consultation
               </button>
+              <button
+                onClick={navigateToPricing}
+                className="text-slate-300 hover:text-white transition-colors duration-200"
+              >
+                Pricing
+              </button>
             </div>
           </div>
 
@@ -143,6 +156,12 @@ export default function Navigation() {
                 className="block w-full text-left px-3 py-2 bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-lg font-medium"
               >
                 Book Consultation
+              </button>
+              <button
+                onClick={navigateToPricing}
+                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-white transition-colors"
+              >
+                Pricing
               </button>
             </div>
           </div>

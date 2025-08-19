@@ -7,6 +7,7 @@ import AutomationPipeline from "@/components/automation-pipeline";
 import AutomationToolkit from "@/components/automation-toolkit";
 import TestimonialsResults from "@/components/testimonials-results";
 import TeamSection from "@/components/team-section";
+import PricingCTA from "@/components/pricing-cta";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 
@@ -23,6 +24,7 @@ export default function Home() {
         <AutomationToolkit />
         <TestimonialsResults />
         <TeamSection />
+        <PricingCTA />
         <ContactSection />
       </main>
       <Footer />
